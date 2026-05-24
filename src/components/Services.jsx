@@ -10,7 +10,7 @@ const services = () => {
 
                 <div className="h-96">
                     <h4 className="text-[36px] mt-10 text-gray-900 px-9 font-semibold">Complete Web Solutions & Management</h4>
-                    <p className="text-gray-600 px-9 mt-4 max-w-4xl">We don’t just build websites — we handle the complete digital infrastructure behind your business.
+                    <p className="text-slate-600 px-9 mt-4 max-w-4xl">We don’t just build websites — we handle the complete digital infrastructure behind your business.
                         From secure hosting and performance optimization to ongoing maintenance, SEO, and scalability,
                         we ensure your platform stays fast, reliable, and ready for growth.</p>
 

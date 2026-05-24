@@ -2,6 +2,10 @@ import Home from "@/components/Home";
 import Services from "@/components/Services";
 import Solutions from "@/components/Solutions";
 import Service from "@/components/Service";
+import ChooseUs from "@/components/ChooseUs";
+import Footer from "@/components/Footer";
+import TeamMembers from "@/components/TeamMembers";
+
 
 export default function HomePage() {
   return (
@@ -12,8 +16,16 @@ export default function HomePage() {
       <div>
         <Solutions />
       </div>
+
+      <div>
+        <ChooseUs />
+      </div>
+
+      <TeamMembers />
+
+      <Footer />
     </main>
 
-    
+
   );
 }

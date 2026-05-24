@@ -7,6 +7,7 @@ const Service = () => {
       <div className="absolute -top-90 -left-60 h-87.5 w-187.5 rounded-full bg-[#FFA369] blur-[180px]" />
       <div className="absolute -bottom-40 -right-40 h-35 w-212.5 rounded-full bg-[#D6F1FF] blur-[180px]" />
 
+      {/* image section  */}
       <div className="border border-white w-142.25 h-96 flex items-center justify-center rounded-2xl">
         <Image src="/services.png" alt="services" width={569} height={384} className="object-cover" />
       </div>

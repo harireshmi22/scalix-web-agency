@@ -99,30 +99,31 @@ const OurProject = () => {
     return (
         <section
             ref={sectionRef}
-            className="w-full flex flex-col items-center relative overflow-hidden mt-30 pb-20 h-full"
+            id="projects"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 pb-16 sm:pb-20 h-full"
         >
             {/* Background Glows */}
             <div className="absolute -bottom-60 -left-40 h-80 w-[700px] rounded-full bg-[#FFA369] blur-[300px]" />
             <div className="absolute -top-60 -right-40 h-80 w-[700px] rounded-full bg-[#D6F1FF] blur-[250px]" />
 
             {/* Header */}
-            <div className="proj-header w-full flex flex-col items-center px-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+            <div className="proj-header w-full flex flex-col items-center px-4 sm:px-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[220px] h-12">
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">OUR PROJECTS</h2>
                 </div>
 
-                <h1 className={`text-[36px] mt-10 font-normal text-gray-900 text-center max-w-3xl ${anton.className}`}>
+                <h1 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center max-w-3xl ${anton.className}`}>
                     Showcasing Our <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Best Work</span> &{" "}
                     <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Digital Creations</span>
                 </h1>
 
-                <p className={`text-gray-500 max-w-2xl mt-5 text-center text-[15px] leading-relaxed ${geologica.className}`}>
-                    Explore a curated selection of projects we've built — from agency websites and e-commerce platforms to AI-powered tools and full-stack applications.
+                <p className={`text-gray-500 max-w-2xl mt-4 sm:mt-5 text-center text-[15px] leading-relaxed ${geologica.className}`}>
+                    Explore a curated selection of projects we&apos;ve built — from agency websites and e-commerce platforms to AI-powered tools and full-stack applications.
                 </p>
             </div>
 
             {/* Swiper */}
-            <div className="w-full mx-auto mt-30 px-6">
+            <div className="w-full max-w-7xl mx-auto mt-12 sm:mt-20 px-4 sm:px-6">
                 <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={0}
@@ -135,31 +136,30 @@ const OurProject = () => {
                     className="w-full project-swiper"
                 >
                     {projects.map((project) => (
-                        <SwiperSlide key={project.id}>
-                            <div className="group flex rounded-2xl border border-gray-200 bg-white/60  gap-10 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-0.5">
+                        <SwiperSlide key={project.id} className="p-2">
+                            <div className="group flex flex-col lg:flex-row rounded-3xl border border-gray-200 bg-white/60 gap-6 sm:gap-10 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-0.5 p-5 sm:p-8 lg:p-10">
                                 {/* Image */}
-                                <div className="relative w-full h-[400px]  overflow-hidden ">
+                                <div className="relative w-full lg:w-1/2 h-[220px] sm:h-[320px] lg:h-[400px] overflow-hidden rounded-2xl flex-shrink-0">
                                     <Image
                                         src={project.image}
                                         alt={project.title}
                                         fill
                                         className="object-contain transition-transform duration-500 group-hover:scale-105"
                                     />
-
                                 </div>
 
                                 {/* Content */}
-                                <div className="w-300 flex flex-col justify-center">
-                                    <h3 className={`text-3xl font-semibold text-gray-900 ${anton.className}`}>
+                                <div className="w-full lg:w-1/2 flex flex-col justify-center text-left">
+                                    <h3 className={`text-2xl sm:text-3xl font-semibold text-gray-900 ${anton.className}`}>
                                         {project.title}
                                     </h3>
 
-                                    <p className={`text-[15px] leading-relaxed text-gray-500 mt-4 ${geologica.className}`}>
+                                    <p className={`text-[14.5px] leading-relaxed text-gray-500 mt-3 sm:mt-4 ${geologica.className}`}>
                                         {project.description}
                                     </p>
 
                                     {/* Tags */}
-                                    <div className="flex flex-wrap gap-2 mt-6">
+                                    <div className="flex flex-wrap gap-2 mt-5 sm:mt-6">
                                         {project.tags.map((tag) => (
                                             <span
                                                 key={tag}
@@ -176,7 +176,7 @@ const OurProject = () => {
                                     </div>
 
                                     {/* View Project */}
-                                    <div className="mt-8 flex items-center gap-2 group/link cursor-pointer">
+                                    <div className="mt-6 sm:mt-8 flex items-center gap-2 group/link cursor-pointer self-start">
                                         <span
                                             className={`text-sm font-semibold ${geologica.className}`}
                                             style={{ color: project.accentFrom }}

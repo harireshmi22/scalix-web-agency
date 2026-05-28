@@ -86,43 +86,44 @@ const Service = () => {
     return (
         <section
             ref={sectionRef}
-            className="w-full flex flex-col items-center relative overflow-hidden mt-30 px-6"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6"
         >
             {/* Background Glows */}
-            <div className="absolute -bottom-40 -left-40 h-70 w-[600px] rounded-full bg-[#D6F1FF] blur-[300px] opacity-50" />
-            <div className="absolute -top-60 -right-60 h-80 w-[500px] rounded-full bg-[#FFA369] blur-[250px] opacity-30" />
+            <div className="absolute -bottom-24 -left-24 sm:-bottom-40 sm:-left-40 h-56 w-56 sm:h-72 sm:w-72 rounded-full bg-[#D6F1FF] blur-[300px] opacity-50" />
+            <div className="absolute -top-28 -right-28 sm:-top-60 sm:-right-60 h-48 w-48 sm:h-80 sm:w-80 rounded-full bg-[#FFA369] blur-[250px] opacity-30" />
 
             {/* Content Row — Image Left, Text Right */}
-            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div className="w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10 lg:gap-16">
 
                 {/* Left — Image */}
                 <div className="svc2-anim opacity-0 -translate-x-10 transition-all duration-700 ease-out w-full md:w-1/2 flex justify-center">
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200/60 border border-gray-100 group">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200/60 border border-gray-100 group w-full max-w-md">
                         <Image
                             src={service2}
                             alt="Building Scalable Experiences"
                             width={560}
                             height={420}
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-auto"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none" />
                     </div>
                 </div>
 
                 {/* Right — Text Content */}
                 <div className="svc2-anim opacity-0 translate-x-10 transition-all duration-700 ease-out delay-150 w-full md:w-1/2">
-                    <h3 className={`text-[40px] leading-tight text-gray-900 ${anton.className}`}>
+                    <h3 className={`text-[30px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
                         Building <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Scalable</span> Digital Experiences
                     </h3>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-6 max-w-xl ${geologica.className}`}>
-                        We don't just build websites — we handle the complete digital infrastructure behind your business.
+                        We don&apos;t just build websites — we handle the complete digital infrastructure behind your business.
                         From secure hosting and performance optimization to ongoing maintenance, SEO, and scalability,
                         we ensure your platform stays fast, reliable, and ready for growth.
                     </p>
 
                     {/* Feature Chips */}
-                    <div className="grid grid-cols-2 gap-3 mt-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
                         {features.map((feat) => (
                             <div
                                 key={feat.label}
@@ -130,7 +131,7 @@ const Service = () => {
                                 style={{ borderColor: `${feat.color}20` }}
                             >
                                 <div
-                                    className="flex-shrink-0 h-8 w-8 rounded-lg flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110"
+                                    className="shrink-0 h-8 w-8 rounded-lg flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110"
                                     style={{ background: feat.color }}
                                 >
                                     {feat.icon}
@@ -143,7 +144,7 @@ const Service = () => {
                     </div>
 
                     {/* Stats Row */}
-                    <div className="flex gap-8 mt-10 pt-8 border-t border-gray-200">
+                    <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 mt-10 pt-8 border-t border-gray-200">
                         {stats.map((stat) => (
                             <div key={stat.label} className="text-center">
                                 <p className={`text-3xl font-bold text-gray-900 ${anton.className}`}>{stat.value}</p>

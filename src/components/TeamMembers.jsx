@@ -89,7 +89,8 @@ const TeamMembers = () => {
     return (
         <section
             ref={sectionRef}
-            className='w-full flex flex-col items-center relative overflow-hidden mt-30 px-6 pb-40'
+            id="team"
+            className='w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 pb-20 sm:pb-32'
         >
             {/* Background Glows */}
             <div className="absolute -bottom-80 -left-40 h-85 w-185 rounded-full bg-[#FFA369] blur-[250px]" />
@@ -98,12 +99,12 @@ const TeamMembers = () => {
             <div className="absolute -top-80 -left-80 h-80 w-212.5 rounded-full bg-[#D6F1FF] blur-[150px]" />
 
             {/* Header */}
-            <div className='team-header w-full flex flex-col items-center mt-15 opacity-0 translate-y-8 transition-all duration-700 ease-out'>
+            <div className='team-header w-full flex flex-col items-center mt-10 sm:mt-15 opacity-0 translate-y-8 transition-all duration-700 ease-out'>
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[250px] h-12">
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">OUR TEAM MEMBERS</h2>
                 </div>
 
-                <h1 className={`text-[36px] mt-10 font-normal text-gray-900 text-center ${anton.className}`}>
+                <h1 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center ${anton.className}`}>
                     Meet the people behind <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalix</span> <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Agency</span>
                 </h1>
 

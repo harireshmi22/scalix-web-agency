@@ -1,5 +1,5 @@
 "use client"
-import { Anton, Architects_Daughter, Siemreap } from 'next/font/google'
+import { Anton, Architects_Daughter } from 'next/font/google'
 import Image from 'next/image';
 import hero from '../../public/hero.png';
 import hero1 from '../../public/hero1.png';
@@ -39,18 +39,18 @@ const projectImages = [
 
 function ProjectSwipper() {
     return (
-        <main className='w-full h-full  flex flex-col items-center justify-center px-6'>
+        <section className='w-full flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden'>
 
-            <h1 className={`text-[36px] font-black ${anton.className} w-210 text-center mt-70`}>At <span className={`${architectsDaughter.className} text-[#FF6300]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#FF6300]`}>modern applications</span>
+            <h1 className={`max-w-5xl text-[28px] sm:text-[36px] md:text-[44px] font-black ${anton.className} text-center mt-14 sm:mt-20 leading-tight`}>At <span className={`${architectsDaughter.className} text-[#FF6300]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#FF6300]`}>modern applications</span>
                 for businesses</h1>
-            <section className='relative border w-full h-[786px] overflow-hidden bg-[#15157D] mt-20 flex items-center justify-center'>
+            <section className='relative border w-full min-h-[30rem] sm:min-h-[38rem] lg:min-h-[48rem] overflow-hidden bg-[#15157D] mt-10 sm:mt-20 flex items-center justify-center py-10 sm:py-14'>
                 {/* Orange glow - left bottom */}
-                <div className="absolute -bottom-40 -left-40 h-87.5 w-187.5 rounded-full bg-[#FFA369] blur-[180px]" />
+                <div className="absolute -bottom-24 -left-24 sm:-bottom-40 sm:-left-40 h-48 w-72 sm:h-80 sm:w-[30rem] rounded-full bg-[#FFA369] blur-[180px]" />
 
                 {/* Blue glow - right bottom */}
-                <div className="absolute -top-40 -right-120 h-75 w-212.5 rounded-full bg-[#D6F1FF] blur-[180px]" />
+                <div className="absolute -top-20 -right-24 sm:-top-40 sm:-right-32 h-40 w-64 sm:h-72 sm:w-[32rem] rounded-full bg-[#D6F1FF] blur-[180px]" />
 
-                <div className='w-[1280px] h-[580px] mx-auto shadow-2xl z-20'>
+                <div className='relative w-full max-w-6xl aspect-video mx-auto shadow-2xl z-20'>
 
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay]}
@@ -66,7 +66,9 @@ function ProjectSwipper() {
                         {
                             projectImages.map((image) =>
                                 <SwiperSlide key={image.id}>
-                                    <Image src={image.src} alt={image.alt} className="w-full h-full object-cover rounded-lg" />
+                                    <div className="relative w-full h-full">
+                                        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 1200px" className="object-contain rounded-lg" />
+                                    </div>
                                 </SwiperSlide>
                             )
                         }
@@ -76,7 +78,7 @@ function ProjectSwipper() {
 
 
             </section>
-        </main>
+        </section>
     )
 }
 

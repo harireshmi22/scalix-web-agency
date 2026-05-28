@@ -41,13 +41,13 @@ const Banner = () => {
     return (
         <section
             ref={sectionRef}
-            className="w-full flex flex-col items-center relative overflow-hidden mt-20 px-6 py-12"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 py-8 sm:py-12"
         >
             {/* Background Glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[800px] rounded-full bg-[#FFA369] blur-[220px] opacity-20 pointer-events-none" />
 
             {/* Glowing CTA Container */}
-            <div className="banner-anim opacity-0 translate-y-8 transition-all duration-[800ms] ease-out relative w-full max-w-[1200px] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1E1E90] to-[#111162] border border-white/10 shadow-2xl px-8 py-16 md:py-20 flex flex-col items-center text-center">
+            <div className="banner-anim opacity-0 translate-y-8 transition-all duration-[800ms] ease-out relative w-full max-w-[1200px] rounded-3xl overflow-hidden bg-gradient-to-br from-[#1E1E90] to-[#111162] border border-white/10 shadow-2xl px-4 sm:px-8 py-10 sm:py-16 md:py-20 flex flex-col items-center text-center">
                 {/* Visual grid backdrop */}
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent opacity-60 pointer-events-none" />
                 <div className="absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-[#ff6200]/20 blur-[80px]" />
@@ -61,8 +61,8 @@ const Banner = () => {
                 </div>
 
                 {/* Heading */}
-                <h2 className={`relative z-10 text-[32px] sm:text-[46px] md:text-[54px] font-bold text-white max-w-4xl mt-8 leading-tight tracking-wide ${anton.className}`}>
-                    Have a Vision? Let's turn it into <br className="hidden sm:block" />
+                <h2 className={`relative z-10 text-[26px] sm:text-[40px] md:text-[54px] font-bold text-white max-w-4xl mt-6 sm:mt-8 leading-tight tracking-wide ${anton.className}`}>
+                    Have a Vision? Let&apos;s turn it into <br className="hidden sm:block" />
                     a <span className={`text-[#FFA369] ${architectsDaughter.className} font-normal tracking-wider`}>scalable</span> masterpiece.
                 </h2>
 
@@ -72,11 +72,11 @@ const Banner = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className="relative z-10 flex flex-wrap justify-center gap-5 mt-10 w-full">
+                <div className="relative z-10 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 mt-10 w-full">
                     {/* Primary Button */}
                     <a
                         href="#contact"
-                        className="group relative px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-black bg-gradient-to-r from-[#FFA369] to-[#FFB78A] shadow-xl shadow-orange-950/30 hover:shadow-orange-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                        className="group relative w-full sm:w-auto justify-center px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-black bg-gradient-to-r from-[#FFA369] to-[#FFB78A] shadow-xl shadow-orange-950/30 hover:shadow-orange-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                     >
                         <span>Start Your Project</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="black" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5">
@@ -87,7 +87,7 @@ const Banner = () => {
                     {/* Secondary Button */}
                     <a
                         href="#projects"
-                        className="group relative px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-white border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
+                        className="group relative w-full sm:w-auto justify-center px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-white border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                     >
                         <span>View Portfolio</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300">

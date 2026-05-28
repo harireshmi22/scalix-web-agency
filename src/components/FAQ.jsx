@@ -48,6 +48,13 @@ const faqData = [
 
 const FAQItem = ({ item, isOpen, onClick }) => {
     const contentRef = useRef(null);
+    const [maxHeight, setMaxHeight] = useState("0px");
+
+    useEffect(() => {
+        if (!contentRef.current) return;
+        const h = contentRef.current.scrollHeight;
+        setMaxHeight(isOpen ? `${h}px` : "0px");
+    }, [isOpen]);
 
     return (
         <div
@@ -70,7 +77,7 @@ const FAQItem = ({ item, isOpen, onClick }) => {
                 ref={contentRef}
                 className="transition-all duration-300 ease-in-out"
                 style={{
-                    maxHeight: isOpen ? contentRef.current?.scrollHeight + "px" : "0px",
+                    maxHeight: maxHeight,
                     opacity: isOpen ? 1 : 0,
                 }}
             >
@@ -103,7 +110,7 @@ const FAQ = () => {
     return (
         <section
             ref={sectionRef}
-            className="w-full flex flex-col items-center relative overflow-hidden mt-30 px-6 pb-10"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 pb-10"
         >
             {/* Background Glows */}
             <div className="absolute -bottom-60 -left-40 h-[400px] w-[700px] rounded-full bg-[#D6F1FF] blur-[350px] opacity-40" />
@@ -114,7 +121,7 @@ const FAQ = () => {
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[100px] h-12">
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">FAQ</h2>
                 </div>
-                <h1 className={`text-[36px] mt-10 font-semibold text-gray-900 text-center max-w-2xl ${anton.className}`}>
+                <h1 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-semibold text-gray-900 text-center max-w-2xl ${anton.className}`}>
                     Frequently Asked <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Questions</span>
                 </h1>
                 <p className={`text-gray-500 max-w-xl mt-4 text-center text-[15px] leading-relaxed ${geologica.className}`}>
@@ -123,7 +130,7 @@ const FAQ = () => {
             </div>
 
             {/* FAQ Accordion */}
-            <div className="faq-anim opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 w-full max-w-[800px] mt-14 flex flex-col gap-3">
+            <div className="faq-anim opacity-0 translate-y-8 transition-all duration-700 ease-out delay-200 w-full max-w-[800px] mt-10 sm:mt-14 flex flex-col gap-3">
                 {faqData.map((item, i) => (
                     <FAQItem
                         key={i}

@@ -152,16 +152,17 @@ const Footer = () => {
                 </div>
 
                 {/* Team Acknowledgement Row */}
-                <div className="py-8 border-b border-white/10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div className="py-8 border-b border-white/10 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
                     <div className="md:col-span-3">
                         <span className={`text-[12px] uppercase text-gray-500 font-extrabold tracking-widest ${geologica.className}`}>
                             The Team Behind Scalix:
                         </span>
                     </div>
-                    <div className={`md:col-span-9 flex flex-wrap gap-x-8 gap-y-2 text-[13.5px] text-gray-300 ${geologica.className}`}>
+                    <div className={`md:col-span-9 flex flex-wrap gap-x-6 gap-y-2 text-[13.5px] text-gray-300 ${geologica.className}`}>
                         <span><strong>Hari Reshmi</strong> — Manager & Coordinator</span>
                         <span><strong>Kanishq Gautam</strong> — MERN Developer</span>
                         <span><strong>Srestha Mishra</strong> — AI/ML Developer</span>
+                        <span><strong>Kaushtubh Singh</strong> — JS Developer</span>
                     </div>
                 </div>
 

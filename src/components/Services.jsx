@@ -71,7 +71,8 @@ const Services = () => {
     return (
         <section
             ref={sectionRef}
-            className="w-full flex flex-col items-center relative overflow-hidden mt-30 px-6"
+            id="services"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6"
         >
             {/* Background Glows */}
             <div className="absolute -bottom-60 -right-40 h-80 w-[600px] rounded-full bg-[#FFA369] blur-[300px] opacity-40" />
@@ -85,7 +86,7 @@ const Services = () => {
             </div>
 
             {/* Content Row */}
-            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-16 mt-16">
+            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 mt-10 sm:mt-16">
 
                 {/* Left — Text Content */}
                 <div className="svc-anim opacity-0 -translate-x-10 transition-all duration-700 ease-out delay-100 w-full md:w-1/2">
@@ -94,7 +95,7 @@ const Services = () => {
                     </h3>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-6 max-w-xl ${geologica.className}`}>
-                        We don't just build websites — we handle the complete digital infrastructure behind your business.
+                        We don&apos;t just build websites — we handle the complete digital infrastructure behind your business.
                         From secure hosting and performance optimization to ongoing maintenance, SEO, and scalability,
                         we ensure your platform stays fast, reliable, and ready for growth.
                     </p>

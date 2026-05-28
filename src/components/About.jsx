@@ -83,11 +83,11 @@ const About = () => {
         <section
             ref={sectionRef}
             id="about"
-            className="w-full flex flex-col items-center relative overflow-hidden mt-30 px-6 pb-20"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 pb-16 sm:pb-20"
         >
             {/* Background Glows */}
-            <div className="absolute -top-40 -left-60 h-[400px] w-[700px] rounded-full bg-[#FFA369] blur-[320px] opacity-25" />
-            <div className="absolute -bottom-60 -right-40 h-[450px] w-[750px] rounded-full bg-[#D6F1FF] blur-[350px] opacity-35" />
+            <div className="absolute -top-24 -left-28 sm:-top-40 sm:-left-60 h-[16rem] w-[18rem] sm:h-[25rem] sm:w-[44rem] rounded-full bg-[#FFA369] blur-[320px] opacity-25" />
+            <div className="absolute -bottom-28 -right-20 sm:-bottom-60 sm:-right-40 h-[18rem] w-[20rem] sm:h-[28rem] sm:w-[47rem] rounded-full bg-[#D6F1FF] blur-[350px] opacity-35" />
 
             {/* Layout Grid */}
             <div className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -119,13 +119,13 @@ const About = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[36px] sm:text-[45px] leading-tight font-semibold text-gray-900 ${anton.className}`}>
+                    <h1 className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[30px] sm:text-[45px] leading-tight font-semibold text-gray-900 ${anton.className}`}>
                         We are <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6200] to-[#ff8a3d]">Scalix</span>, a team built to shape your <span className={`text-[#ff6200] ${architectsDaughter.className}`}>success.</span>
                     </h1>
 
                     {/* Paragraph */}
                     <p className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200 mt-6 text-[15px] sm:text-[16px] leading-relaxed text-gray-500 max-w-[650px] ${geologica.className}`}>
-                        At Scalix Web Agency, we specialize in bridging the gap between elegant design, robust technology, and business-focused functionality. Our multidisciplinary approach allows us to deliver high-quality, high-speed applications that don't just sit online—they convert and scale.
+                        At Scalix Web Agency, we specialize in bridging the gap between elegant design, robust technology, and business-focused functionality. Our multidisciplinary approach allows us to deliver high-quality, high-speed applications that don&apos;t just sit online—they convert and scale.
                     </p>
 
                     {/* Core Values Stack */}
@@ -133,7 +133,7 @@ const About = () => {
                         {coreValues.map((value, idx) => (
                             <div
                                 key={idx}
-                                className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex items-start gap-4 p-4 rounded-2xl border border-gray-100 bg-white/40 backdrop-blur-sm hover:border-gray-200 hover:bg-white/70 hover:shadow-md transition-all duration-300`}
+                                className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col sm:flex-row items-start gap-4 p-4 rounded-2xl border border-gray-100 bg-white/40 backdrop-blur-sm hover:border-gray-200 hover:bg-white/70 hover:shadow-md transition-all duration-300`}
                                 style={{ transitionDelay: `${300 + idx * 100}ms` }}
                             >
                                 <div className={`flex-shrink-0 h-10 w-10 rounded-xl flex items-center justify-center border ${value.iconBorder} ${value.iconBg}`}>

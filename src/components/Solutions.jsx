@@ -74,7 +74,7 @@ const Solutions = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full flex flex-col items-center overflow-hidden mt-30 px-6"
+            className="relative w-full flex flex-col items-center overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6"
         >
             {/* Background Glows */}
             <div className="absolute -bottom-80 -right-60 h-[400px] w-[800px] rounded-full bg-[#FFA369] blur-[400px] opacity-40" />
@@ -82,14 +82,14 @@ const Solutions = () => {
 
             {/* Section Badge */}
             <div className="sol-anim opacity-0 translate-y-6 transition-all duration-700 ease-out">
-                <div className="rounded-4xl flex items-center justify-center border border-gray-300 h-12 px-8">
-                    <h2 className="text-sm font-bold text-gray-500 tracking-widest">WEB SOLUTIONS FOR EVERY SECTOR</h2>
+                <div className="rounded-4xl flex items-center justify-center border border-gray-300 h-12 px-6 sm:px-8">
+                    <h2 className="text-xs sm:text-sm font-bold text-gray-500 tracking-widest text-center">WEB SOLUTIONS FOR EVERY SECTOR</h2>
                 </div>
             </div>
 
             {/* Heading */}
-            <div className="sol-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-10">
-                <h1 className={`text-[40px] text-center font-semibold max-w-3xl ${anton.className}`}>
+            <div className="sol-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-8 sm:mt-10">
+                <h1 className={`text-[30px] sm:text-[40px] text-center font-semibold max-w-3xl ${anton.className}`}>
                     Building <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Smarter</span>,{" "}
                     <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalable Digital</span> Solutions{" "}
                     <span className={`text-gray-400 ${architectsDaughter.className}`}>for Modern Businesses</span>
@@ -97,7 +97,7 @@ const Solutions = () => {
             </div>
 
             {/* Content Row — Image Left, Text Right */}
-            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-16 mt-20">
+            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 mt-12 sm:mt-20">
 
                 {/* Left — Image */}
                 <div className="sol-anim opacity-0 -translate-x-10 transition-all duration-700 ease-out delay-200 w-full md:w-5/12 flex justify-center">

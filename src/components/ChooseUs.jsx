@@ -77,7 +77,7 @@ const ChooseUs = () => {
     return (
         <section
             ref={sectionRef}
-            className="w-full flex flex-col items-center relative overflow-hidden mt-30 px-6"
+            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6"
         >
             {/* Background Glows */}
             <div className="absolute -bottom-60 -left-60 h-[400px] w-[700px] rounded-full bg-[#D6F1FF] blur-[350px] opacity-50" />
@@ -91,15 +91,15 @@ const ChooseUs = () => {
             </div>
 
             {/* Heading */}
-            <div className="cu-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-10">
-                <h1 className={`text-[36px] text-center font-semibold text-gray-900 max-w-3xl ${anton.className}`}>
+            <div className="cu-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-8 sm:mt-10">
+                <h1 className={`text-[30px] sm:text-[36px] text-center font-semibold text-gray-900 max-w-3xl ${anton.className}`}>
                     Why <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalix</span> Is the Right Choice for Modern{" "}
                     <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Solutions</span>
                 </h1>
             </div>
 
             {/* Content Row — Text Left, Image Right */}
-            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-16 mt-20">
+            <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 mt-12 sm:mt-20">
 
                 {/* Left — Reason Cards */}
                 <div className="w-full md:w-7/12">

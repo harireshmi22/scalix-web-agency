@@ -84,26 +84,26 @@ const services = [
 
 const OurService = () => {
     return (
-        <section className='w-full flex flex-col items-center relative overflow-hidden mt-30 px-6'>
+        <section className='w-full flex flex-col items-center relative overflow-hidden mt-20 sm:mt-30 px-4 sm:px-6'>
 
             {/* Background glows */}
-            <div className="absolute -bottom-100 -left-40 h-85 w-185 rounded-full bg-[#FFA369] blur-[300px]"></div>
-            <div className="absolute -bottom-100 -right-40 h-85 w-185 rounded-full bg-[#FFA369] blur-[300px]"></div>
-            <div className="absolute -top-80 -right-80 h-80 w-212.5 rounded-full bg-[#D6F1FF] blur-[150px]"></div>
-            <div className="absolute -top-80 -left-80 h-80 w-212.5 rounded-full bg-[#D6F1FF] blur-[150px]"></div>
+            <div className="absolute -bottom-40 -left-24 sm:-bottom-24 sm:-left-40 h-56 w-72 sm:h-80 sm:w-80 rounded-full bg-[#FFA369] blur-[300px]"></div>
+            <div className="absolute -bottom-40 -right-24 sm:-bottom-24 sm:-right-40 h-56 w-72 sm:h-80 sm:w-80 rounded-full bg-[#FFA369] blur-[300px]"></div>
+            <div className="absolute -top-32 -right-24 sm:-top-40 sm:-right-40 h-48 w-64 sm:h-80 sm:w-72 rounded-full bg-[#D6F1FF] blur-[150px]"></div>
+            <div className="absolute -top-32 -left-24 sm:-top-40 sm:-left-40 h-48 w-64 sm:h-80 sm:w-72 rounded-full bg-[#D6F1FF] blur-[150px]"></div>
 
             {/* Header */}
-            <div className='w-full flex flex-col items-center mt-15'>
+            <div className='w-full flex flex-col items-center mt-10 sm:mt-15'>
                 <div className="rounded-4xl flex items-center justify-center">
-                    <h2 className={`${anton.className} text-[40px] font-bold text-gray-900`}>Our Services</h2>
-                </div>
-                <h1 className={`text-[36px] mt-20 font-normal w-200 text-gray-900 text-center ${anton.className}`}>
+                        <h2 className={`${anton.className} text-[26px] sm:text-[32px] md:text-[36px] font-bold text-gray-900`}>Our Services</h2>
+                    </div>
+                <h1 className={`text-[28px] sm:text-[36px] mt-10 sm:mt-20 font-normal max-w-4xl text-gray-900 text-center ${anton.className}`}>
                     Our <span className={`text-[#ff6200] ${architectsDaughter.className}`}>mission</span> Is To Make Your <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Business</span> Better Through Technology
                 </h1>
             </div>
 
             {/* Service Cards Grid */}
-            <div className="w-full max-w-[1280px] mx-auto py-16 mt-10">
+            <div className="w-full max-w-7xl mx-auto py-12 md:py-16 mt-8 md:mt-10 px-2 md:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service) => (
                         <div
@@ -111,7 +111,7 @@ const OurService = () => {
                             className="group relative flex flex-col gap-5 rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm p-8 transition-all duration-300 hover:shadow-xl hover:shadow-orange-100/50 hover:-translate-y-1 hover:border-[#ff6200]/30"
                         >
                             {/* Icon */}
-                            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#ff6200] to-[#ff8a3d] text-white shadow-md shadow-orange-200 transition-transform duration-300 group-hover:scale-110">
+                            <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-xl bg-linear-to-br from-[#ff6200] to-[#ff8a3d] text-white shadow-md shadow-orange-200 transition-transform duration-300 group-hover:scale-110">
                                 {service.icon}
                             </div>
 
@@ -126,7 +126,7 @@ const OurService = () => {
                             </p>
 
                             {/* Subtle bottom accent line on hover */}
-                            <div className="absolute bottom-0 left-1/2 h-[3px] w-0 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#ff6200] to-[#0066ff] transition-all duration-300 group-hover:w-1/2" />
+                            <div className="absolute bottom-0 left-1/2 h-0.75 w-0 -translate-x-1/2 rounded-full bg-linear-to-r from-[#ff6200] to-[#0066ff] transition-all duration-300 group-hover:w-1/2" />
                         </div>
                     ))}
                 </div>

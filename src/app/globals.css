@@ -32,3 +32,12 @@ html.lenis body {
   overflow: hidden;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

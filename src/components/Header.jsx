@@ -28,7 +28,7 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-[95%] max-w-7xl min-h-16 rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3 transition-all duration-500 ${scrolled
+            className={`fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-[95%] max-w-7xl min-h-16 rounded-2xl flex items-center justify-between px-3 sm:px-6 py-3 transition-all duration-500 ${scrolled
                     ? "bg-white/70 backdrop-blur-xl shadow-lg shadow-gray-200/40 border border-gray-200/60"
                     : "bg-white/10 backdrop-blur-md border border-white/15"
                 }`}
@@ -38,7 +38,7 @@ const Header = () => {
                 <div className="h-8 w-8 rounded-lg bg-linear-to-br from-[#ff6200] to-[#ff8a3d] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                     <span className="text-white text-sm font-black">S</span>
                 </div>
-                <span className={`text-xl font-bold transition-colors duration-300 ${scrolled ? "text-gray-900" : "text-white"} ${anton.className}`}>
+                <span className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${scrolled ? "text-gray-900" : "text-white"} ${anton.className}`}>
                     Scalix
                 </span>
             </a>

@@ -129,10 +129,10 @@ const Footer = () => {
                             <ul className={`flex flex-col gap-3 text-[14px] text-gray-400 ${geologica.className}`}>
                                 <li>
                                     <a
-                                        href="mailto:hello@scalix.com"
+                                        href="mailto:scalix.web.hsk1@gmail.com"
                                         className="hover:text-[#FFA369] transition-colors duration-200"
                                     >
-                                        hello@scalix.com
+                                        scalix.web.hsk1@gmail.com
                                     </a>
                                 </li>
                                 <li>

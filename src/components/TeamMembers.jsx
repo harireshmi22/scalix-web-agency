@@ -32,7 +32,7 @@ const teamMembers = [
     },
     {
         id: 2,
-        name: "Kanishq Gautam",
+        name: "Kanishq Dev",
         role: "MERN Developer",
         initials: "KG",
         description: "Designs and develops responsive websites and web applications using modern MERN stack technologies with a focus on clean UI and usability.",

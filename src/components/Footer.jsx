@@ -160,7 +160,7 @@ const Footer = () => {
                     </div>
                     <div className={`md:col-span-9 flex flex-wrap gap-x-6 gap-y-2 text-[13.5px] text-gray-300 ${geologica.className}`}>
                         <span><strong>Hari Reshmi</strong> — Manager & Coordinator</span>
-                        <span><strong>Kanishq Gautam</strong> — MERN Developer</span>
+                        <span><strong>Kanishq Dev</strong> — MERN Developer</span>
                         <span><strong>Srestha Mishra</strong> — AI/ML Developer</span>
                         <span><strong>Kaushtubh Singh</strong> — JS Developer</span>
                     </div>

@@ -77,7 +77,7 @@ const Home = () => {
                     </div>
 
                     {/* Majestic Title Headline */}
-                    <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[38px] sm:text-[54px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
+                    <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[30px] sm:text-[48px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
                         Make your <span className="relative inline-block px-1">
                             {/* Backdrop highlight block */}
                             <span className="absolute inset-0 bg-[#FFA369]/10 rounded-2xl -rotate-1 blur-[2px]" />
@@ -90,7 +90,7 @@ const Home = () => {
                     </h1>
 
                     {/* Smooth, descriptive supporting text */}
-                    <p className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200 mt-8 text-[17px] sm:text-[20px] leading-relaxed text-gray-300/90 max-w-155 ${geologica.className}`}>
+                    <p className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200 mt-8 text-[17px] sm:text-[20px] leading-relaxed text-gray-300/90 max-w-full sm:max-w-[600px] ${geologica.className}`}>
                         We architect premium, bespoke digital products that combine beautiful typography, reliable database functionality, and industry-leading performance to elevate your agency or enterprise.
                     </p>
 
@@ -122,7 +122,7 @@ const Home = () => {
                 </div>
 
                 {/* Right Interactive Card / Illustration */}
-                <div className="w-160 max-w-[420px] sm:max-w-[560px] lg:max-w-none mx-auto lg:mx-0">
+                <div className="w-full max-w-[320px] sm:max-w-[500px] lg:max-w-[650px] mx-auto">
                     {/* Backside ambient glow board */}
 
                     <Image

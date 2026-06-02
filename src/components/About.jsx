@@ -117,7 +117,7 @@ const About = () => {
                         {coreValues.map((value, idx) => (
                             <div
                                 key={idx}
-                                className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col sm:flex-row items-start gap-4 p-4 rounded-2xl border border-gray-100 bg-white/40 backdrop-blur-sm hover:border-gray-200 hover:bg-white/70 hover:shadow-md transition-all duration-300`}
+                                className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col sm:flex-col lg:flex-row items-start gap-4 p-4 rounded-2xl border border-gray-100 bg-white/40 backdrop-blur-sm hover:border-gray-200 hover:bg-white/70 hover:shadow-md transition-all duration-300`}
                                 style={{ transitionDelay: `${300 + idx * 100}ms` }}
                             >
                                 <div className={`flex-shrink-0 h-10 w-10 rounded-xl flex items-center justify-center border ${value.iconBorder} ${value.iconBg}`}>

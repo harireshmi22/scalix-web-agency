@@ -207,6 +207,7 @@ function Page() {
                                 src="/home.png"
                                 alt="Project visual preview"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-[#081042] via-[#081042]/25 to-transparent" />

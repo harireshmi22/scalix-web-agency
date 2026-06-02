@@ -134,18 +134,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col">
+  <html lang="en" data-scroll-behavior="smooth">
+    <head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </head>
+
+    <body className="min-h-screen flex flex-col overflow-x-hidden">
+      <LenisProvider>
         <Header />
-        <LenisProvider>{children}</LenisProvider>
+
+        <main className="flex-1 w-full">
+          {children}
+        </main>
+
         <Footer />
-      </body>
-    </html>
+      </LenisProvider>
+    </body>
+  </html>
+);
   );
 }

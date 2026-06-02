@@ -1,0 +1,151 @@
+import type { Metadata, Viewport } from "next";
+import "./globals.css";
+import LenisProvider from "@/components/LenisProvider";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const BASE_URL = "https://scalix.com";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0d0d59",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "Scalix Web Agency — Premium Web Development & Design",
+    template: "%s | Scalix Web Agency",
+  },
+  description:
+    "Scalix Web Agency builds premium, scalable, and high-performance websites and web applications. Specializing in Next.js, React, MERN stack, UI/UX design, SEO optimization, and hosting for businesses and creators.",
+  keywords: [
+    "web development agency",
+    "web design",
+    "Next.js development",
+    "React development",
+    "MERN stack",
+    "UI/UX design",
+    "SEO optimization",
+    "web application development",
+    "website maintenance",
+    "hosting and deployment",
+    "Scalix",
+    "Coimbatore web agency",
+    "India web development",
+    "custom website",
+    "responsive design",
+    "full-stack development",
+  ],
+  authors: [{ name: "Scalix Web Agency", url: BASE_URL }],
+  creator: "Scalix Web Agency",
+  publisher: "Scalix Web Agency",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: BASE_URL,
+    siteName: "Scalix Web Agency",
+    title: "Scalix Web Agency — Premium Web Development & Design",
+    description:
+      "We architect premium, bespoke digital products that combine beautiful design, reliable functionality, and industry-leading performance to elevate your business.",
+    images: [
+      {
+        url: "/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Scalix Web Agency — Premium Web Development",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scalix Web Agency — Premium Web Development & Design",
+    description:
+      "We build secure, scalable, and high-performance websites for businesses and creators. Next.js · React · MERN · UI/UX · SEO.",
+    images: ["/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
+};
+
+// JSON-LD Structured Data for Google Rich Results
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Scalix Web Agency",
+  url: BASE_URL,
+  logo: `${BASE_URL}/logo.jpeg`,
+  image: `${BASE_URL}/hero.png`,
+  description:
+    "Premium web development agency specializing in Next.js, React, MERN stack, UI/UX design, and SEO optimization for businesses and creators.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1st Floor, 75, Navavoor",
+    addressLocality: "Coimbatore",
+    addressRegion: "Tamil Nadu",
+    postalCode: "641010",
+    addressCountry: "IN",
+  },
+  telephone: "+917598805818",
+  email: "hello@scalix.com",
+  priceRange: "₹₹",
+  sameAs: [],
+  founder: [
+    { "@type": "Person", name: "Hari Reshmi", jobTitle: "Manager & Coordinator" },
+    { "@type": "Person", name: "Kanishq Gautam", jobTitle: "MERN Developer" },
+    { "@type": "Person", name: "Srestha Mishra", jobTitle: "AI/ML Developer" },
+    { "@type": "Person", name: "Kaushtubh Singh", jobTitle: "JS Developer" },
+  ],
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  serviceType: [
+    "Website Development",
+    "Web Application Development",
+    "UI/UX Design",
+    "SEO Optimization",
+    "Hosting & Deployment",
+    "Website Maintenance",
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <LenisProvider>{children}</LenisProvider>
+        <Footer />
+      </body>
+    </html>
+  );
+}

@@ -61,7 +61,7 @@ const Home = () => {
                     </div>
 
                     {/* Majestic Title Headline */}
-                    <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[38px] sm:text-[54px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
+                    <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[38px] sm:text-[54px] text-[32px] sm:text-[44px] md:text-[56px] text-[32px] sm:text-[44px] md:text-[56px] text-[32px] sm:text-[44px] md:text-[56px] text-[32px] sm:text-[44px] md:text-[56px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
                         Make your <span className="relative inline-block px-1">
                             {/* Backdrop highlight block */}
                             <span className="absolute inset-0 bg-[#FFA369]/10 rounded-2xl -rotate-1 blur-[2px]" />

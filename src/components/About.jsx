@@ -79,11 +79,12 @@ const About = () => {
                 <div className="about-anim opacity-0 -translate-x-8 transition-all duration-700 ease-out lg:col-span-5 flex justify-center">
                     <div className="relative group w-full max-w-[500px] aspect-[1.1] rounded-3xl overflow-hidden bg-white/40 border border-gray-200/50 p-6 shadow-xl hover:shadow-2xl transition-all duration-500">
                         {/* Glow effect on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-orange-100/20 via-transparent to-blue-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <div className="absolute inset-0 bg-linear-to-br from-orange-100/20 via-transparent to-blue-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                         <Image
                             src={collaborationImg}
                             alt="About Scalix Collaboration"
+                            fill
                             className="w-full h-full object-contain select-none transition-transform duration-700 group-hover:scale-103"
                         />
                     </div>
@@ -102,9 +103,9 @@ const About = () => {
                     </div>
 
                     {/* Headline */}
-                    <h1 className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[30px] sm:text-[45px] leading-tight font-semibold text-gray-900 ${anton.className}`}>
+                    <h2 className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[30px] sm:text-[45px] leading-tight font-semibold text-gray-900 ${anton.className}`}>
                         We are <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6200] to-[#ff8a3d]">Scalix</span>, a team built to shape your <span className={`text-[#ff6200] ${architectsDaughter.className}`}>success.</span>
-                    </h1>
+                    </h2>
 
                     {/* Paragraph */}
                     <p className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200 mt-6 text-[15px] sm:text-[16px] leading-relaxed text-gray-500 max-w-[650px] ${geologica.className}`}>

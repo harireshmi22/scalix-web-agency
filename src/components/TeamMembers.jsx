@@ -88,9 +88,9 @@ const TeamMembers = () => {
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">OUR TEAM MEMBERS</h2>
                 </div>
 
-                <h1 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center ${anton.className}`}>
+                <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center ${anton.className}`}>
                     Meet the people behind <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalix</span> <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Agency</span>
-                </h1>
+                </h2>
 
                 <p className={`text-gray-500 max-w-3xl mt-5 text-center text-[15px] leading-relaxed ${geologica.className}`}>
                     At Scalix Web Agency, our team brings together development, design, automation, and project management skills to build modern digital solutions. Each member focuses on a specific area of work, helping us create websites, web applications, automation systems, and optimized user experiences with a clear and collaborative process.

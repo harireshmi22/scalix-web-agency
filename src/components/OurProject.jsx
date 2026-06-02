@@ -96,10 +96,10 @@ const OurProject = () => {
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">OUR PROJECTS</h2>
                 </div>
 
-                <h1 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center max-w-3xl ${anton.className}`}>
+                <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center max-w-3xl ${anton.className}`}>
                     Showcasing Our <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Best Work</span> &{" "}
                     <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Digital Creations</span>
-                </h1>
+                </h2>
 
                 <p className={`text-gray-500 max-w-2xl mt-4 sm:mt-5 text-center text-[15px] leading-relaxed ${geologica.className}`}>
                     Explore a curated selection of projects we&apos;ve built — from agency websites and e-commerce platforms to AI-powered tools and full-stack applications.
@@ -128,7 +128,8 @@ const OurProject = () => {
                                         src={project.image}
                                         alt={project.title}
                                         fill
-                                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        className="object-contain transition-transform duration-500 group-hover:scale-105 w-full h-auto"
                                     />
                                 </div>
 

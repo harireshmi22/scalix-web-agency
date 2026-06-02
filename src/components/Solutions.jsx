@@ -72,11 +72,11 @@ const Solutions = () => {
 
             {/* Heading */}
             <div className="sol-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-8 sm:mt-10">
-                <h1 className={`text-[30px] sm:text-[40px] text-center font-semibold max-w-3xl ${anton.className}`}>
+                <h2 className={`text-[30px] sm:text-[40px] text-center font-semibold max-w-3xl ${anton.className}`}>
                     Building <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Smarter</span>,{" "}
                     <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalable Digital</span> Solutions{" "}
                     <span className={`text-gray-400 ${architectsDaughter.className}`}>for Modern Businesses</span>
-                </h1>
+                </h2>
             </div>
 
             {/* Content Row — Image Left, Text Right */}
@@ -90,9 +90,9 @@ const Solutions = () => {
                             alt="Web Solutions"
                             width={480}
                             height={560}
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-auto"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none" />
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@ const Solutions = () => {
                                 className="group flex items-start gap-4 p-5 rounded-xl border border-gray-100 bg-white/40 backdrop-blur-sm transition-all duration-300 hover:border-gray-200 hover:bg-white/70 hover:shadow-md hover:-translate-y-0.5"
                             >
                                 <div
-                                    className="flex-shrink-0 h-10 w-10 rounded-lg flex items-center justify-center text-white shadow-md transition-transform duration-300 group-hover:scale-110"
+                                    className="shrink-0 h-10 w-10 rounded-lg flex items-center justify-center text-white shadow-md transition-transform duration-300 group-hover:scale-110"
                                     style={{ background: item.color }}
                                 >
                                     {item.icon}

@@ -113,7 +113,7 @@ const Services = () => {
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         {/* Subtle gradient overlay */}
-                        <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none w-full h-auto" />
                     </div>
                 </div>
             </div>

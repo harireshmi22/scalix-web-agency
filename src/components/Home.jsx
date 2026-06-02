@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react'
 import homes from "../../public/home-removebg-preview.png"
 import Image from 'next/image'
 import { anton, architectsDaughter, geologica } from "@/lib/fonts"
+import Link from 'next/link'
 
 const Home = () => {
     const sectionRef = useRef(null);
@@ -80,8 +81,8 @@ const Home = () => {
                     {/* Premium Call-to-Actions */}
                     <div className="home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-300 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 mt-10">
                         {/* Explore CTA */}
-                        <a
-                            href="#services"
+                        <Link
+                            href="/service"
                             className="group relative w-full sm:w-auto justify-center px-8 py-4 rounded-2xl text-[15px] font-bold tracking-wide text-black bg-linear-to-r from-[#FFA369] to-[#FFB78A] shadow-xl shadow-orange-500/10 hover:shadow-orange-400/25 hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden flex items-center gap-2 cursor-pointer"
                         >
                             <span className="relative z-10">Let&apos;s Explore</span>
@@ -89,18 +90,18 @@ const Home = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="black" className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:translate-x-1.5">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                             </svg>
-                        </a>
+                        </Link>
 
                         {/* Contact CTA */}
-                        <a
-                            href="#contact"
+                        <Link
+                            href="/contact"
                             className="group relative w-full sm:w-auto justify-center px-8 py-4 rounded-2xl text-[15px] font-bold tracking-wide text-white border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/30 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                         >
                             <span>Contact Us</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors duration-300">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 10.742l3.293-3.293m0 0l3.293 3.293m-3.293-3.293v8.018m-6.62-1.285a3 3 0 11-4.243-4.243 3 3 0 014.243 4.243zm13.486 0a3 3 0 11-4.243-4.243 3 3 0 014.243 4.243z" />
                             </svg>
-                        </a>
+                        </Link>
                     </div>
                 </div>
 

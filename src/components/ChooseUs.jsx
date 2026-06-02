@@ -1,25 +1,8 @@
 "use client"
 import React, { useRef, useEffect } from 'react'
 import Image from 'next/image';
-import { Anton } from 'next/font/google';
-import { Architects_Daughter } from 'next/font/google';
-import { Geologica } from 'next/font/google';
 import solution from "../../public/solution.png"
-
-const anton = Anton({
-    subsets: ["latin"],
-    weight: "400",
-});
-
-const geologica = Geologica({
-    subsets: ["latin"],
-    weight: "300",
-});
-
-const architectsDaughter = Architects_Daughter({
-    subsets: ["latin"],
-    weight: "400",
-});
+import { anton, geologica, architectsDaughter } from '@/lib/fonts';
 
 const reasons = [
     {
@@ -92,10 +75,10 @@ const ChooseUs = () => {
 
             {/* Heading */}
             <div className="cu-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-8 sm:mt-10">
-                <h1 className={`text-[30px] sm:text-[36px] text-center font-semibold text-gray-900 max-w-3xl ${anton.className}`}>
+                <h2 className={`text-[30px] sm:text-[36px] text-center font-semibold text-gray-900 max-w-3xl ${anton.className}`}>
                     Why <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalix</span> Is the Right Choice for Modern{" "}
                     <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Solutions</span>
-                </h1>
+                </h2>
             </div>
 
             {/* Content Row — Text Left, Image Right */}
@@ -152,9 +135,9 @@ const ChooseUs = () => {
                             alt="Why Choose Scalix"
                             width={480}
                             height={560}
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-auto"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none" />
                     </div>
                 </div>
             </div>

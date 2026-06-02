@@ -80,9 +80,9 @@ const OurService = () => {
                 <div className="rounded-4xl flex items-center justify-center">
                     <h2 className={`${anton.className} text-[26px] sm:text-[32px] md:text-[36px] font-bold text-gray-900`}>Our Services</h2>
                 </div>
-                <h1 className={`text-[28px] sm:text-[36px] mt-10 sm:mt-20 font-normal max-w-4xl text-gray-900 text-center ${anton.className}`}>
+                <h2 className={`text-[28px] sm:text-[36px] mt-10 sm:mt-20 font-normal max-w-4xl text-gray-900 text-center ${anton.className}`}>
                     Our <span className={`text-[#ff6200] ${architectsDaughter.className}`}>mission</span> Is To Make Your <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Business</span> Better Through Technology
-                </h1>
+                </h2>
             </div>
 
             {/* Service Cards Grid */}

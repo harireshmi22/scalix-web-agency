@@ -53,7 +53,13 @@ function ProjectSwipper() {
                             projectImages.map((image) =>
                                 <SwiperSlide key={image.id}>
                                     <div className="relative w-full h-full">
-                                        <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, 1200px" className="object-contain rounded-lg" />
+                                        <Image
+                                            src={image.src}
+                                            alt={image.alt}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 1200px"
+                                            className="object-contain rounded-lg w-full h-auto"
+                                        />
                                     </div>
                                 </SwiperSlide>
                             )

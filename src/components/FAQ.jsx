@@ -104,9 +104,9 @@ const FAQ = () => {
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[100px] h-12">
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">FAQ</h2>
                 </div>
-                <h1 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-semibold text-gray-900 text-center max-w-2xl ${anton.className}`}>
+                <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-semibold text-gray-900 text-center max-w-2xl ${anton.className}`}>
                     Frequently Asked <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Questions</span>
-                </h1>
+                </h2>
                 <p className={`text-gray-500 max-w-xl mt-4 text-center text-[15px] leading-relaxed ${geologica.className}`}>
                     Got questions? Here are some answers to help you understand how we work and what we offer.
                 </p>

@@ -82,6 +82,7 @@ const contactInfo = [
             </svg>
         ),
     },
+    
     {
         title: "Location",
         value: "Coimbatore, Tamil Nadu",
@@ -95,6 +96,23 @@ const contactInfo = [
             </svg>
         ),
     },
+    {
+    title: "Instagram",
+    value: "@scalix.hks",
+    href: "https://www.instagram.com/scalix.hks/",
+    color: "from-[#E1306C] to-[#C13584]",
+    iconBg: "bg-[#E1306C]/10",
+    icon: (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 h-6 text-[#E1306C]"
+        >
+            <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+        </svg>
+    ),
+},
 ];
 
 export default function ContactPage() {

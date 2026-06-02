@@ -87,12 +87,12 @@ const OurProject = () => {
             className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 pb-16 sm:pb-20 h-full"
         >
             {/* Background Glows */}
-            <div className="absolute -bottom-60 -left-40 h-80 w-[700px] rounded-full bg-[#FFA369] blur-[300px]" />
-            <div className="absolute -top-60 -right-40 h-80 w-[700px] rounded-full bg-[#D6F1FF] blur-[250px]" />
+            <div className="absolute -bottom-60 -left-40 h-40 sm:h-60 lg:h-80 w-[300px] sm:w-[500px] lg:w-[700px] rounded-full bg-[#FFA369] blur-[300px]" />
+            <div className="absolute -top-60 -right-40 h-40 sm:h-60 lg:h-80 w-[300px] sm:w-[500px] lg:w-[700px] rounded-full bg-[#D6F1FF] blur-[250px]" />
 
             {/* Header */}
             <div className="proj-header w-full flex flex-col items-center px-4 sm:px-6 opacity-0 translate-y-8 transition-all duration-700 ease-out">
-                <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[220px] h-12">
+                <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-full max-w-[220px] h-12">
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">OUR PROJECTS</h2>
                 </div>
 
@@ -123,7 +123,7 @@ const OurProject = () => {
                         <SwiperSlide key={project.id} className="p-2">
                             <div className="group flex flex-col lg:flex-row rounded-3xl border border-gray-200 bg-white/60 gap-6 sm:gap-10 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-0.5 p-5 sm:p-8 lg:p-10">
                                 {/* Image */}
-                                <div className="relative w-full lg:w-1/2 h-[220px] sm:h-[320px] lg:h-[400px] overflow-hidden rounded-2xl shrink-0">
+                                <div className="relative w-full h-auto lg:w-1/2 h-[220px] sm:h-[320px] lg:h-[400px] overflow-hidden rounded-2xl shrink-0">
                                     <Image
                                         src={project.image}
                                         alt={project.title}

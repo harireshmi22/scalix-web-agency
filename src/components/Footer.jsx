@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="absolute -bottom-40 -right-40 h-[350px] w-[600px] rounded-full bg-[#D6F1FF] blur-[200px] opacity-15 pointer-events-none" />
 
             {/* Grid Container */}
-            <div className="w-full max-w-[1400px] mx-auto z-10">
+            <div className="w-full max-w-7xl mx-auto z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10">
 
                     {/* Left Column: Brand & Description */}
@@ -26,7 +26,7 @@ const Footer = () => {
                                 Scalix
                             </span>
                         </a>
-                        <p className={`text-gray-300 text-[14.5px] leading-relaxed max-w-[360px] ${geologica.className}`}>
+                        <p className={`text-gray-300 text-[14.5px] leading-relaxed max-w-full md:max-w-[360px] ${geologica.className}`}>
                             Building modern, scalable, and high-performance websites for businesses and creators. We specialize in MERN, Next.js, and visually stunning digital products that scale.
                         </p>
                         {/* Social Links placeholder */}

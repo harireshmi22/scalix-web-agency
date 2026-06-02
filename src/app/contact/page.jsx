@@ -60,8 +60,8 @@ const contactInfo = [
     },
     {
         title: "Email",
-        value: "hello@scalix.com",
-        href: "mailto:hello@scalix.com",
+        value: "scalix.web.hsk1@gmail.com",
+        href: "mailto:scalix.web.hsk1@gmail.com",
         color: "from-[#ff6200] to-[#ff8a3d]",
         iconBg: "bg-[#ff6200]/10",
         icon: (

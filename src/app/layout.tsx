@@ -105,9 +105,9 @@ const jsonLd = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "1st Floor, 75, Navavoor",
-    addressLocality: "Coimbatore",
-    addressRegion: "Tamil Nadu",
-    postalCode: "641010",
+    addressLocality: "Lucknow",
+    addressRegion: "Uttarpradesh",
+    postalCode: "226017",
     addressCountry: "IN",
   },
   telephone: "+917598805818",

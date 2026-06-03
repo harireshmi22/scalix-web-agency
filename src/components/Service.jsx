@@ -127,10 +127,10 @@ const Service = () => {
                     </div>
 
                     {/* Stats Row */}
-                    <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 mt-10 pt-8 border-t border-gray-200">
+                    <div className="flex flex-row flex-wrap gap-6 mt-10 pt-8 border-t border-gray-200 justify-center">
                         {stats.map((stat) => (
-                            <div key={stat.label} className="text-center">
-                                <p className={`text-3xl font-bold text-gray-900 ${anton.className}`}>{stat.value}</p>
+                            <div key={stat.label} className="text-center min-w-[120px]">
+                                <p className={`text-2xl sm:text-3xl font-bold text-gray-900 ${anton.className}`}>{stat.value}</p>
                                 <p className={`text-[12px] text-gray-400 mt-1 ${geologica.className}`}>{stat.label}</p>
                             </div>
                         ))}

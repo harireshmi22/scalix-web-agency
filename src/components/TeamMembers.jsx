@@ -77,10 +77,10 @@ const TeamMembers = () => {
             className='w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 pb-20 sm:pb-32'
         >
             {/* Background Glows */}
-            <div className="absolute -bottom-80 -left-40 h-85 w-185 rounded-full bg-[#FFA369] blur-[250px]" />
-            <div className="absolute -bottom-80 -right-40 h-85 w-185 rounded-full bg-[#FFA369] blur-[250px]" />
-            <div className="absolute -top-80 -right-80 h-80 w-212.5 rounded-full bg-[#D6F1FF] blur-[150px]" />
-            <div className="absolute -top-80 -left-80 h-80 w-212.5 rounded-full bg-[#D6F1FF] blur-[150px]" />
+            <div className="absolute -bottom-80 -left-40 h-[22rem] w-[22rem] sm:h-[24rem] sm:w-[24rem] rounded-full bg-[#FFA369] blur-[250px]" />
+            <div className="absolute -bottom-80 -right-40 h-[22rem] w-[22rem] sm:h-[24rem] sm:w-[24rem] rounded-full bg-[#FFA369] blur-[250px]" />
+            <div className="absolute -top-80 -right-80 h-[20rem] w-[20rem] sm:h-[26rem] sm:w-[26rem] rounded-full bg-[#D6F1FF] blur-[150px]" />
+            <div className="absolute -top-80 -left-80 h-[20rem] w-[20rem] sm:h-[26rem] sm:w-[26rem] rounded-full bg-[#D6F1FF] blur-[150px]" />
 
             {/* Header */}
             <div className='team-header w-full flex flex-col items-center mt-10 sm:mt-15 opacity-0 translate-y-8 transition-all duration-700 ease-out'>
@@ -103,7 +103,7 @@ const TeamMembers = () => {
                     {teamMembers.map((member, index) => (
                         <div
                             key={member.id}
-                            className="team-card group relative flex flex-col rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm p-8 opacity-0 translate-y-10 transition-all duration-700 ease-out hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 hover:border-gray-300"
+                            className="team-card group relative flex flex-col rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-sm p-5 sm:p-8 opacity-0 translate-y-10 transition-all duration-700 ease-out hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 hover:border-gray-300"
                             style={{ transitionDelay: `${index * 120}ms` }}
                         >
                             {/* Top row: avatar + name/role */}
@@ -119,7 +119,7 @@ const TeamMembers = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className={`text-xl font-semibold text-gray-900 ${anton.className}`}>
+                                    <h3 className={`text-lg sm:text-xl font-semibold text-gray-900 ${anton.className}`}>
                                         {member.name}
                                     </h3>
                                     <p className={`text-sm mt-1 font-medium ${geologica.className}`} style={{ color: member.accentFrom }}>

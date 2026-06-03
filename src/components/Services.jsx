@@ -72,8 +72,8 @@ const Services = () => {
             <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 mt-10 sm:mt-16">
 
                 {/* Left — Text Content */}
-                <div className="svc-anim opacity-0 -translate-x-10 transition-all duration-700 ease-out delay-100 w-full md:w-1/2">
-                    <h3 className={`text-[40px] leading-tight text-gray-900 ${anton.className}`}>
+                <div className="svc-anim opacity-0 translate-y-6 md:-translate-x-10 transition-all duration-700 ease-out delay-100 w-full md:w-1/2">
+                    <h3 className={`text-[32px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
                         Complete <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Web Solutions</span> & Management
                     </h3>
 
@@ -103,13 +103,14 @@ const Services = () => {
                 </div>
 
                 {/* Right — Image */}
-                <div className="svc-anim opacity-0 translate-x-10 transition-all duration-700 ease-out delay-200 w-full md:w-1/2 flex justify-center">
+                <div className="svc-anim opacity-0 translate-y-6 md:translate-x-10 transition-all duration-700 ease-out delay-200 w-full md:w-1/2 flex justify-center">
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200/60 border border-gray-100 group">
                         <Image
                             src={service}
                             alt="Complete Web Solutions"
                             width={560}
                             height={420}
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         {/* Subtle gradient overlay */}

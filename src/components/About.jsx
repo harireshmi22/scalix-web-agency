@@ -12,7 +12,7 @@ const About = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add("about-animate-in");
+                        <Image src={collaborationImg} alt="About Scalix Collaboration" fill sizes="(max-width: 640px) 80vw, 320px" className="w-full h-full object-contain select-none transition-transform duration-700 group-hover:scale-103" />
                     }
                 });
             },

@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     "responsive design",
     "full-stack development",
   ],
+  
   authors: [{ name: "Scalix Web Agency", url: BASE_URL }],
   creator: "Scalix Web Agency",
   publisher: "Scalix Web Agency",

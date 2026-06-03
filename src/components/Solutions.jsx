@@ -83,13 +83,14 @@ const Solutions = () => {
             <div className="w-full max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16 mt-12 sm:mt-20">
 
                 {/* Left — Image */}
-                <div className="sol-anim opacity-0 -translate-x-10 transition-all duration-700 ease-out delay-200 w-full md:w-5/12 flex justify-center">
+                <div className="sol-anim opacity-0 translate-y-6 md:-translate-x-10 transition-all duration-700 ease-out delay-200 w-full md:w-5/12 flex justify-center">
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200/60 border border-gray-100 group">
                         <Image
                             src={solutions}
                             alt="Web Solutions"
                             width={480}
                             height={560}
+                            sizes="(max-width: 768px) 100vw, 40vw"
                             className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-auto"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none" />
@@ -97,8 +98,8 @@ const Solutions = () => {
                 </div>
 
                 {/* Right — Text + Solution Items */}
-                <div className="sol-anim opacity-0 translate-x-10 transition-all duration-700 ease-out delay-300 w-full md:w-7/12">
-                    <h3 className={`text-[32px] leading-tight text-gray-900 ${anton.className}`}>
+                <div className="sol-anim opacity-0 translate-y-6 md:translate-x-10 transition-all duration-700 ease-out delay-300 w-full md:w-7/12">
+                    <h3 className={`text-[28px] sm:text-[32px] leading-tight text-gray-900 ${anton.className}`}>
                         Modern <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Web Solutions</span> Designed for{" "}
                         <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Growth</span>
                     </h3>

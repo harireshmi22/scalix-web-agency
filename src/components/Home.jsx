@@ -1,6 +1,6 @@
 "use client"
 import React, { useRef, useEffect } from 'react'
-import homes from "../../public/home-removebg-preview.png"
+const homesSrc = '/home-removebg-preview.avif';
 import Image from 'next/image'
 import { anton, architectsDaughter, geologica } from "@/lib/fonts"
 import Link from 'next/link'
@@ -46,20 +46,7 @@ const Home = () => {
 
             {/* Main Interactive Grid */}
             <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center my-auto">
-
-                {/* Left Text / Actions Column */}
-                <div className="lg:col-span-7 flex flex-col justify-center text-left">
-
-                    {/* Brand Pill Badge */}
-                    <div className="home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex items-center mb-6">
-                        <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 border border-white/10 bg-white/5 backdrop-blur-md shadow-inner shadow-white/5">
-                            <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-                            <span className={`text-gray-300 text-[11px] md:text-xs uppercase tracking-widest font-extrabold ${geologica.className}`}>
-                                Now Accepting New Projects
-                            </span>
-                        </div>
-                    </div>
-
+                <div className="lg:col-span-7">
                     {/* Majestic Title Headline */}
                     <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[32px] sm:text-[44px] md:text-[56px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
                         Make your <span className="relative inline-block px-1">
@@ -105,14 +92,17 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Right Interactive Card / Illustration */}
                 <div className="hidden md:flex w-full max-w-[420px] sm:max-w-[560px] lg:max-w-[640px] mx-auto lg:mx-0 lg:col-span-5 lg:justify-self-end">
                     <Image
-                        src={homes}
+                        src={homesSrc}
                         alt="Scalix Digital Illustration"
+                        width={640}
+                        height={640}
                         className="w-full h-auto object-contain p-0 sm:p-4 lg:p-8 select-none transition-transform duration-[1.5s] ease-out"
                         sizes="(max-width: 1024px) 50vw, 640px"
                         priority
+                        placeholder="blur"
+                        blurDataURL={"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><rect width='10' height='10' fill='%230d0d59'/></svg>"}
                     />
                 </div>
             </div>

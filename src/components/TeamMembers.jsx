@@ -77,10 +77,10 @@ const TeamMembers = () => {
             className='w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 pb-20 sm:pb-32'
         >
             {/* Background Glows */}
-            <div className="absolute -bottom-80 -left-40 h-[22rem] w-[22rem] sm:h-[24rem] sm:w-[24rem] rounded-full bg-[#FFA369] blur-[250px]" />
-            <div className="absolute -bottom-80 -right-40 h-[22rem] w-[22rem] sm:h-[24rem] sm:w-[24rem] rounded-full bg-[#FFA369] blur-[250px]" />
-            <div className="absolute -top-80 -right-80 h-[20rem] w-[20rem] sm:h-[26rem] sm:w-[26rem] rounded-full bg-[#D6F1FF] blur-[150px]" />
-            <div className="absolute -top-80 -left-80 h-[20rem] w-[20rem] sm:h-[26rem] sm:w-[26rem] rounded-full bg-[#D6F1FF] blur-[150px]" />
+            <div className="absolute -bottom-80 -left-40 h-88 w-88 sm:h-96 sm:w-96 rounded-full bg-[#FFA369] blur-[250px]" />
+            <div className="absolute -bottom-80 -right-40 h-88 w-88 sm:h-96 sm:w-96 rounded-full bg-[#FFA369] blur-[250px]" />
+            <div className="absolute -top-80 -right-80 h-80 w-80 sm:h-96 sm:96 rounded-full bg-[#D6F1FF] blur-[150px]" />
+            <div className="absolute -top-80 -left-80 h-80 w-80 sm:h-96 sm:w-96 rounded-full bg-[#D6F1FF] blur-[150px]" />
 
             {/* Header */}
             <div className='team-header w-full flex flex-col items-center mt-10 sm:mt-15 opacity-0 translate-y-8 transition-all duration-700 ease-out'>
@@ -110,7 +110,7 @@ const TeamMembers = () => {
                             <div className="flex items-center gap-5">
                                 {/* Avatar with gradient initials */}
                                 <div
-                                    className="flex-shrink-0 h-16 w-16 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg transition-transform duration-300 group-hover:scale-110"
+                                    className="shrink-0 h-16 w-16 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg transition-transform duration-300 group-hover:scale-110"
                                     style={{
                                         background: `linear-gradient(135deg, ${member.accentFrom}, ${member.accentTo})`,
                                     }}

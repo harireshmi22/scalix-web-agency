@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "responsive design",
     "full-stack development",
   ],
-  
+
   authors: [{ name: "Scalix Web Agency", url: BASE_URL }],
   creator: "Scalix Web Agency",
   publisher: "Scalix Web Agency",
@@ -145,6 +145,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="preload" as="image" href="/home-removebg-preview.avif" />
+        <link rel="preload" as="image" href="/hero.avif" />
       </head>
 
       <body className="min-h-screen flex flex-col overflow-x-hidden">

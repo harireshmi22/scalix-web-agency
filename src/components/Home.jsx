@@ -106,14 +106,12 @@ const Home = () => {
                 </div>
 
                 {/* Right Interactive Card / Illustration */}
-                <div className="w-full max-w-[420px] sm:max-w-[560px] mx-auto lg:mx-0 lg:max-w-none">
-                    {/* Backside ambient glow board */}
-
+                <div className="hidden md:flex w-full max-w-[420px] sm:max-w-[560px] lg:max-w-[640px] mx-auto lg:mx-0 lg:col-span-5 lg:justify-self-end">
                     <Image
                         src={homes}
                         alt="Scalix Digital Illustration"
-                        className="w-full h-full object-contain p-0 sm:p-4 lg:p-8 select-none transition-transform duration-[1.5s] ease-out group-hover:scale-105 mix-blend-multiply"
-                        sizes="(max-width: 1024px) 100vw, 420px"
+                        className="w-full h-auto object-contain p-0 sm:p-4 lg:p-8 select-none transition-transform duration-[1.5s] ease-out"
+                        sizes="(max-width: 1024px) 50vw, 640px"
                         priority
                     />
                 </div>

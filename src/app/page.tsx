@@ -13,7 +13,7 @@ import About from "@/components/About"
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col">
+    <div className="flex flex-col">
       <Home />
       <ProjectSwipper />
       <Services />
@@ -26,7 +26,7 @@ export default function HomePage() {
       <Banner />
       <About />
       <FAQ />
-    </main>
+    </div>
 
 
   );

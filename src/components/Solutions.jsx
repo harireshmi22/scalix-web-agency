@@ -74,7 +74,7 @@ const Solutions = () => {
             <div className="sol-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-8 sm:mt-10">
                 <h2 className={`text-[30px] sm:text-[40px] text-center font-semibold max-w-3xl ${anton.className}`}>
                     Building <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Smarter</span>,{" "}
-                    <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalable Digital</span> Solutions{" "}
+                    <span className={`text-[#C24700] ${architectsDaughter.className}`}>Scalable Digital</span> Solutions{" "}
                     <span className={`text-gray-400 ${architectsDaughter.className}`}>for Modern Businesses</span>
                 </h2>
             </div>
@@ -100,8 +100,8 @@ const Solutions = () => {
                 {/* Right — Text + Solution Items */}
                 <div className="sol-anim opacity-0 translate-y-6 md:translate-x-10 transition-all duration-700 ease-out delay-300 w-full md:w-7/12">
                     <h3 className={`text-[28px] sm:text-[32px] leading-tight text-gray-900 ${anton.className}`}>
-                        Modern <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Web Solutions</span> Designed for{" "}
-                        <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Growth</span>
+                        Modern <span className={`text-[#C24700] ${architectsDaughter.className}`}>Web Solutions</span> Designed for{" "}
+                        <span className={`text-[#C24700] ${architectsDaughter.className}`}>Growth</span>
                     </h3>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-4 max-w-xl ${geologica.className}`}>
@@ -122,7 +122,7 @@ const Solutions = () => {
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h4 className={`text-[16px] font-semibold text-gray-900 ${anton.className}`}>{item.title}</h4>
+                                    <h3 className={`text-[16px] font-semibold text-gray-900 ${anton.className}`}>{item.title}</h3>
                                     <p className={`text-[13px] text-gray-500 mt-1.5 leading-relaxed ${geologica.className}`}>{item.description}</p>
                                 </div>
                             </div>

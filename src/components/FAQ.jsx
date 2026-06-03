@@ -30,15 +30,6 @@ const faqData = [
 ];
 
 const FAQItem = ({ item, isOpen, onClick }) => {
-    const contentRef = useRef(null);
-    const [maxHeight, setMaxHeight] = useState("0px");
-
-    useEffect(() => {
-        if (!contentRef.current) return;
-        const h = contentRef.current.scrollHeight;
-        setMaxHeight(isOpen ? `${h}px` : "0px");
-    }, [isOpen]);
-
     return (
         <div
             className={`border mb-10 rounded-2xl transition-all duration-300 overflow-hidden ${isOpen ? "border-[#ff6200]/30 bg-white/70 shadow-md shadow-orange-100/30" : "border-gray-200 bg-white/40 hover:border-gray-300 hover:bg-white/60"}`}
@@ -56,18 +47,13 @@ const FAQItem = ({ item, isOpen, onClick }) => {
                     </svg>
                 </div>
             </button>
-            <div
-                ref={contentRef}
-                className="transition-all duration-300 ease-in-out"
-                style={{
-                    maxHeight: maxHeight,
-                    opacity: isOpen ? 1 : 0,
-                }}
-            >
-                <p className={`px-7 pb-6 text-[14px] leading-relaxed text-gray-500 ${geologica.className}`}>
-                    {item.answer}
-                </p>
-            </div>
+            {isOpen ? (
+                <div className="overflow-hidden">
+                    <p className={`px-7 pb-6 text-[14px] leading-relaxed text-gray-500 ${geologica.className}`}>
+                        {item.answer}
+                    </p>
+                </div>
+            ) : null}
         </div>
     );
 };
@@ -105,7 +91,7 @@ const FAQ = () => {
                     <h2 className="text-sm font-bold text-gray-500 tracking-widest">FAQ</h2>
                 </div>
                 <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-semibold text-gray-900 text-center max-w-2xl ${anton.className}`}>
-                    Frequently Asked <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Questions</span>
+                    Frequently Asked <span className={`text-[#C24700] ${architectsDaughter.className}`}>Questions</span>
                 </h2>
                 <p className={`text-gray-500 max-w-xl mt-4 text-center text-[15px] leading-relaxed ${geologica.className}`}>
                     Got questions? Here are some answers to help you understand how we work and what we offer.

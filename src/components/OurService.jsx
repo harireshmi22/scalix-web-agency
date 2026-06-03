@@ -81,7 +81,7 @@ const OurService = () => {
                     <h2 className={`${anton.className} text-[26px] sm:text-[32px] md:text-[36px] font-bold text-gray-900`}>Our Services</h2>
                 </div>
                 <h2 className={`text-[28px] sm:text-[36px] mt-10 sm:mt-20 font-normal max-w-4xl text-gray-900 text-center ${anton.className}`}>
-                    Our <span className={`text-[#ff6200] ${architectsDaughter.className}`}>mission</span> Is To Make Your <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Business</span> Better Through Technology
+                    Our <span className={`text-[#C24700] ${architectsDaughter.className}`}>mission</span> Is To Make Your <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Business</span> Better Through Technology
                 </h2>
             </div>
 
@@ -109,7 +109,7 @@ const OurService = () => {
                             </p>
 
                             {/* Subtle bottom accent line on hover */}
-                            <div className="absolute bottom-0 left-1/2 h-0.75 w-0 -translate-x-1/2 rounded-full bg-linear-to-r from-[#ff6200] to-[#0066ff] transition-all duration-300 group-hover:w-1/2" />
+                            <div className="absolute bottom-0 left-1/2 h-0.75 w-1/2 -translate-x-1/2 origin-center scale-x-0 rounded-full bg-linear-to-r from-[#ff6200] to-[#0066ff] transition-transform duration-300 group-hover:scale-x-100" />
                         </div>
                     ))}
                 </div>

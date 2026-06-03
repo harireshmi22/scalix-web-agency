@@ -18,7 +18,7 @@ const projects = [
         description: "A modern and premium agency website built for Scalix Web Agency, featuring smooth animations, responsive layouts, and a bold visual identity that reflects our brand.",
         tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
         image: "/hero.png",
-        accentFrom: "#ff6200",
+        accentFrom: "#C24700",
         accentTo: "#ff8a3d",
     },
     {
@@ -97,7 +97,7 @@ const OurProject = () => {
                 </div>
 
                 <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center max-w-3xl ${anton.className}`}>
-                    Showcasing Our <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Best Work</span> &{" "}
+                    Showcasing Our <span className={`text-[#C24700] ${architectsDaughter.className}`}>Best Work</span> &{" "}
                     <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Digital Creations</span>
                 </h2>
 
@@ -123,13 +123,14 @@ const OurProject = () => {
                         <SwiperSlide key={project.id} className="p-2">
                             <div className="group flex flex-col lg:flex-row rounded-3xl border border-gray-200 bg-white/60 gap-6 sm:gap-10 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-0.5 p-5 sm:p-8 lg:p-10">
                                 {/* Image */}
-                                <div className="relative w-full h-auto lg:w-1/2 h-[220px] sm:h-[320px] lg:h-[400px] overflow-hidden rounded-2xl shrink-0">
+                                <div className="relative w-full h-[220px] sm:h-[320px] lg:h-[400px] lg:w-1/2 overflow-hidden rounded-2xl shrink-0">
                                     <Image
                                         src={project.image}
                                         alt={project.title}
-                                        fill
+                                        width={1200}
+                                        height={800}
                                         sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="object-contain transition-transform duration-500 group-hover:scale-105 w-full h-auto"
+                                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>
 

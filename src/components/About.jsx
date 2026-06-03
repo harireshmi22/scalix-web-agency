@@ -105,7 +105,7 @@ const About = () => {
 
                     {/* Headline */}
                     <h2 className={`about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[30px] sm:text-[45px] leading-tight font-semibold text-gray-900 ${anton.className}`}>
-                        We are <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff6200] to-[#ff8a3d]">Scalix</span>, a team built to shape your <span className={`text-[#ff6200] ${architectsDaughter.className}`}>success.</span>
+                        We are <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C24700] to-[#ff8a3d]">Scalix</span>, a team built to shape your <span className={`text-[#C24700] ${architectsDaughter.className}`}>success.</span>
                     </h2>
 
                     {/* Paragraph */}

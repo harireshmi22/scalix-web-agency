@@ -3,6 +3,7 @@ import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const BASE_URL = "https://scalix-web-agency.netlify.app";
 
@@ -141,12 +142,13 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
-        <script
+        <Script
+          id="json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          strategy="lazyOnload"
         />
         <link rel="preload" as="image" href="/home-removebg-preview.avif" />
-        <link rel="preload" as="image" href="/hero.avif" />
       </head>
 
       <body className="min-h-screen flex flex-col overflow-x-hidden">

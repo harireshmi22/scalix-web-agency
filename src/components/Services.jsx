@@ -74,7 +74,7 @@ const Services = () => {
                 {/* Left — Text Content */}
                 <div className="svc-anim opacity-0 translate-y-6 md:-translate-x-10 transition-all duration-700 ease-out delay-100 w-full md:w-1/2">
                     <h3 className={`text-[32px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
-                        Complete <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Web Solutions</span> & Management
+                        Complete <span className={`text-[#C24700] ${architectsDaughter.className}`}>Web Solutions</span> & Management
                     </h3>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-6 max-w-xl ${geologica.className}`}>
@@ -94,7 +94,7 @@ const Services = () => {
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h4 className={`text-[16px] font-semibold text-gray-900 ${anton.className}`}>{item.title}</h4>
+                                    <h3 className={`text-[16px] font-semibold text-gray-900 ${anton.className}`}>{item.title}</h3>
                                     <p className={`text-[13px] text-gray-500 mt-1 ${geologica.className}`}>{item.description}</p>
                                 </div>
                             </div>

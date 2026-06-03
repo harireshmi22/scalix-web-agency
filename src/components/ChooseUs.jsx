@@ -76,7 +76,7 @@ const ChooseUs = () => {
             {/* Heading */}
             <div className="cu-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 mt-8 sm:mt-10">
                 <h2 className={`text-[30px] sm:text-[36px] text-center font-semibold text-gray-900 max-w-3xl ${anton.className}`}>
-                    Why <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalix</span> Is the Right Choice for Modern{" "}
+                    Why <span className={`text-[#C24700] ${architectsDaughter.className}`}>Scalix</span> Is the Right Choice for Modern{" "}
                     <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Solutions</span>
                 </h2>
             </div>
@@ -108,9 +108,9 @@ const ChooseUs = () => {
 
                                 {/* Text */}
                                 <div>
-                                    <h4 className={`text-lg font-semibold text-gray-900 ${anton.className}`}>
+                                    <h3 className={`text-lg font-semibold text-gray-900 ${anton.className}`}>
                                         {reason.title}
-                                    </h4>
+                                    </h3>
                                     <p className={`text-[14px] text-gray-500 mt-2 leading-relaxed ${geologica.className}`}>
                                         {reason.description}
                                     </p>

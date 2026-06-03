@@ -11,7 +11,7 @@ const teamMembers = [
         initials: "HR",
         description: "Manages the complete project workflow, assigns tasks, coordinates with team members, and ensures every project is completed with proper planning and execution.",
         skills: ["Project Management", "Team Coordination", "Client Communication", "Workflow Planning"],
-        accentFrom: "#ff6200",
+        accentFrom: "#C24700",
         accentTo: "#ff8a3d",
     },
     {
@@ -89,7 +89,7 @@ const TeamMembers = () => {
                 </div>
 
                 <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center ${anton.className}`}>
-                    Meet the people behind <span className={`text-[#ff6200] ${architectsDaughter.className}`}>Scalix</span> <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Agency</span>
+                    Meet the people behind <span className={`text-[#C24700] ${architectsDaughter.className}`}>Scalix</span> <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Web Agency</span>
                 </h2>
 
                 <p className={`text-gray-500 max-w-3xl mt-5 text-center text-[15px] leading-relaxed ${geologica.className}`}>
@@ -152,7 +152,7 @@ const TeamMembers = () => {
 
                             {/* Bottom accent line */}
                             <div
-                                className="absolute bottom-0 left-1/2 h-[3px] w-0 -translate-x-1/2 rounded-full transition-all duration-300 group-hover:w-2/3"
+                                className="absolute bottom-0 left-1/2 h-[3px] w-2/3 -translate-x-1/2 origin-center scale-x-0 rounded-full transition-transform duration-300 group-hover:scale-x-100"
                                 style={{
                                     background: `linear-gradient(90deg, ${member.accentFrom}, ${member.accentTo})`,
                                 }}

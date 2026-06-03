@@ -29,7 +29,7 @@ function ProjectSwipper() {
         <section className='w-full flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden'>
 
             <h1 className={`max-w-5xl text-[26px] sm:text-[36px] md:text-[44px] font-black ${anton.className} text-center mt-14 sm:mt-20 leading-tight`}>
-                At <span className={`${architectsDaughter.className} text-[#FF6300]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#FF6300]`}>modern applications</span>
+                At <span className={`${architectsDaughter.className} text-[#C24700]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#C24700]`}>modern applications</span>
                 for businesses</h1>
             <section className='relative border w-full min-h-[30rem] sm:min-h-[38rem] lg:min-h-[48rem] overflow-hidden bg-[#15157D] mt-10 sm:mt-20 flex items-center justify-center py-10 sm:py-14'>
                 {/* Orange glow - left bottom */}
@@ -52,7 +52,7 @@ function ProjectSwipper() {
                         className="w-full h-full"
                     >
                         {
-                            projectImages.map((image) =>
+                            projectImages.map((image, index) =>
                                 <SwiperSlide key={image.id}>
                                     <div className="w-full h-full flex items-center justify-center">
                                         <Image
@@ -64,7 +64,7 @@ function ProjectSwipper() {
                                             className="object-contain rounded-lg w-full h-auto"
                                             placeholder="blur"
                                             blurDataURL={"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><rect width='10' height='10' fill='%2315157D'/></svg>"}
-                                            unoptimized
+                                            {...(index === 0 ? { priority: true } : { loading: "lazy" })}
                                         />
                                     </div>
                                 </SwiperSlide>

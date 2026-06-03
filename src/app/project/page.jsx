@@ -146,9 +146,10 @@ function Page() {
                                 <Image
                                     src={project.image}
                                     alt={project.title}
-                                    fill
+                                    width={1200}
+                                    height={800}
                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                                 />
                                 {/* <div
                                     className="absolute inset-0"
@@ -207,9 +208,10 @@ function Page() {
                             <Image
                                 src="/home.png"
                                 alt="Project visual preview"
-                                fill
+                                width={1200}
+                                height={750}
                                 sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover"
+                                className="w-full h-full object-cover"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-[#081042] via-[#081042]/25 to-transparent" />
                         </div>

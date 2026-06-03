@@ -4,7 +4,7 @@ import LenisProvider from "@/components/LenisProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const BASE_URL = "https://scalix.com";
+const BASE_URL = "https://scalix-web-agency.netlify.app";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -14,6 +14,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  icons: {
+    icon: "/icon.jpeg",
+    apple: "/apple-icon.jpeg",
+  },
   title: {
     default: "Scalix Web Agency — Premium Web Development & Design",
     template: "%s | Scalix Web Agency",
@@ -134,25 +138,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en" data-scroll-behavior="smooth">
-    <head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-    </head>
+    <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
 
-    <body className="min-h-screen flex flex-col overflow-x-hidden">
-      <LenisProvider>
-        <Header />
+      <body className="min-h-screen flex flex-col overflow-x-hidden">
+        <LenisProvider>
+          <Header />
 
-        <main className="flex-1 w-full">
-          {children}
-        </main>
+          <main className="flex-1 w-full">
+            {children}
+          </main>
 
-        <Footer />
-      </LenisProvider>
-    </body>
-  </html>
-);
+          <Footer />
+        </LenisProvider>
+      </body>
+    </html>
+  );
 }

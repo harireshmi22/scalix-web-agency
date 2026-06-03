@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://scalix.com'
+const BASE_URL = 'https://scalix-web-agency.netlify.app'
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -90,7 +90,7 @@ const ChooseUs = () => {
                         {reasons.map((reason, i) => (
                             <div
                                 key={i}
-                                className={`cu-anim opacity-0 -translate-x-8 transition-all duration-700 ease-out group flex items-start gap-5 p-6 rounded-2xl border border-gray-100 bg-white/40 backdrop-blur-sm hover:bg-white/70 hover:border-gray-200 hover:shadow-lg hover:-translate-y-0.5`}
+                                className={`cu-anim opacity-0 translate-y-6 md:-translate-x-8 transition-all duration-700 ease-out group flex items-start gap-4 sm:gap-5 p-4 sm:p-6 rounded-2xl border border-gray-100 bg-white/40 backdrop-blur-sm hover:bg-white/70 hover:border-gray-200 hover:shadow-lg hover:-translate-y-0.5`}
                                 style={{ transitionDelay: `${200 + i * 120}ms` }}
                             >
                                 {/* Number + Icon */}
@@ -117,7 +117,7 @@ const ChooseUs = () => {
                                 </div>
 
                                 {/* Right arrow on hover */}
-                                <div className="shrink-0 self-center opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                                <div className="hidden sm:block shrink-0 self-center opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke={reason.color} className="w-5 h-5">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                     </svg>
@@ -128,13 +128,14 @@ const ChooseUs = () => {
                 </div>
 
                 {/* Right — Image */}
-                <div className="cu-anim opacity-0 translate-x-10 transition-all duration-700 ease-out delay-500 w-full md:w-5/12 flex justify-center">
+                <div className="cu-anim opacity-0 translate-y-6 md:translate-x-10 transition-all duration-700 ease-out delay-500 w-full md:w-5/12 flex justify-center">
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200/60 border border-gray-100 group">
                         <Image
                             src={solution}
                             alt="Why Choose Scalix"
                             width={480}
                             height={560}
+                            sizes="(max-width: 768px) 100vw, 40vw"
                             className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-auto"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent pointer-events-none" />

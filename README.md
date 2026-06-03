@@ -52,7 +52,7 @@
 | **Typography** | Google Fonts — Anton, Architects Daughter, Geologica |
 | **Smooth Scroll** | [Lenis](https://lenis.darkroom.engineering) |
 | **Carousel** | [Swiper](https://swiperjs.com) |
-| **Language** | TypeScript + JSX |
+| **Language** | Mixed: TypeScript and JSX (project contains .tsx/.jsx files) |
 | **Linting** | ESLint 9 with `eslint-config-next` |
 
 ---
@@ -183,9 +183,20 @@ Alternatively, deploy to any Node.js hosting provider that supports Next.js (Net
 
 ---
 
+## 🔍 Project Notes & Audit
+
+- A short responsive/audit summary is available in `report.md` at the project root. Recent fixes include:
+  - Migrated internal header links to client-side `next/link` and added a mobile drawer scroll-lock.
+  - Hid the large hero illustration on small screens to avoid layout shifts and reduce mobile bandwidth.
+  - Added `sizes` to key `next/image` usages and clipped image wrappers with `overflow-hidden` to prevent decorative glows/animations from overlapping copy.
+
+- PWA / favicon: the app uses `public/icon.jpeg` and an `apple-icon.jpeg` for favicon and Apple touch icon; `src/app/manifest.ts` exports a manifest route wired to those assets.
+
+Refer to `report.md` for a detailed list of issues found and recommended next steps (Lighthouse audit, further `next/image` sizing, and performance tuning).
+
 ## 📜 License
 
-This project is private and proprietary. All rights reserved © 2025 Scalix.
+This project is private and proprietary. All rights reserved © 2026 Scalix.
 
 ---
 

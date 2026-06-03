@@ -1,28 +1,36 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "lenis";
 
 export default function LenisProvider({ children }) {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,
-      smoothTouch: false,
+    let lenis;
+    let rafId;
+
+    // Dynamically import Lenis only on the client when effect runs
+    let mounted = true;
+    import("lenis").then(({ default: Lenis }) => {
+      if (!mounted) return;
+      lenis = new Lenis({
+        duration: 1.2,
+        smoothWheel: true,
+        smoothTouch: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        rafId = requestAnimationFrame(raf);
+      }
+
+      rafId = requestAnimationFrame(raf);
+    }).catch(() => {
+      // ignore import failure in environments without window
     });
 
-    let rafId; 
-
-    function raf(time) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-
-    rafId = requestAnimationFrame(raf); 
-
     return () => {
-      cancelAnimationFrame(rafId); 
-      lenis.destroy();
+      mounted = false;
+      if (rafId) cancelAnimationFrame(rafId);
+      try { lenis?.destroy(); } catch (e) { }
     };
   }, []);
 

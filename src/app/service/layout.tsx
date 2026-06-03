@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Scalix offers custom website development, web application development, UI/UX design, hosting & deployment, website maintenance, and SEO optimization services.",
   alternates: {
-    canonical: "https://scalix.com/service",
+    canonical: "https://scalix-web-agency.netlify.app/service",
   },
 };
 

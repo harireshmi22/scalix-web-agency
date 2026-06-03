@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Explore all Scalix features: cloud hosting, website management, professional web services, bug fixing, SEO optimization, and CI/CD deployment pipelines.",
   alternates: {
-    canonical: "https://scalix.com/feature",
+    canonical: "https://scalix-web-agency.netlify.app/feature",
   },
 };
 

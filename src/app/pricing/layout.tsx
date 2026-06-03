@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Explore Scalix Web Agency pricing: Starter, Professional, and Agency website packages, custom per-page pricing, add-on services, and monthly maintenance plans. No hidden fees.",
   alternates: {
-    canonical: "https://scalix.com/pricing",
+    canonical: "https://scalix-web-agency.netlify.app/pricing",
   },
 };
 

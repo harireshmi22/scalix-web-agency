@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Browse our portfolio of agency websites, e-commerce platforms, AI-powered tools, and full-stack applications built by the Scalix team.",
   alternates: {
-    canonical: "https://scalix.com/project",
+    canonical: "https://scalix-web-agency.netlify.app/project",
   },
 };
 

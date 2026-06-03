@@ -119,16 +119,15 @@ const Home = () => {
 
             {/* Bottom Key Metrics Row */}
             <div className="relative z-10 w-full max-w-7xl mx-auto mt-14 lg:mt-24 border-t border-white/10 pt-8 sm:pt-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center sm:text-left">
+                <div className="grid grid-cols-3 gap-6 text-center">
                     {keyMetrics.map((metric, idx) => (
                         <div
                             key={idx}
-                            className="home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col sm:flex-row items-center gap-4 sm:gap-5 justify-center sm:justify-start"
+                            className="home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col items-center gap-2 justify-center"
                         >
-                            <span className={`text-[32px] font-bold ${anton.className} ${metric.color}`}>
+                            <span className={`text-[28px] sm:text-[32px] md:text-[40px] font-bold ${anton.className} ${metric.color}`}>
                                 {metric.value}
                             </span>
-                            <div className="h-px w-8 bg-white/20 sm:h-8 sm:w-px" />
                             <span className={`text-sm text-gray-400 font-medium tracking-wide ${geologica.className}`}>
                                 {metric.label}
                             </span>

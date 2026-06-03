@@ -55,7 +55,7 @@ const Services = () => {
         <section
             ref={sectionRef}
             id="services"
-            className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6"
+            className="w-full flex flex-col items-center relative mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6"
         >
             {/* Background Glows */}
             <div className="absolute -bottom-60 -right-40 h-80 w-[600px] rounded-full bg-[#FFA369] blur-[300px] opacity-40" />

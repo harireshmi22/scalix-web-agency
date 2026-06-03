@@ -19,7 +19,7 @@ const Footer = () => {
                     {/* Left Column: Brand & Description */}
                     <div className="lg:col-span-4 flex flex-col gap-6">
                         <a href="#home" className="flex items-center gap-1.5 group self-start">
-                            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[#ff6200] to-[#ff8a3d] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <div className="h-9 w-9 rounded-xl bg-linear-to-br from-[#ff6200] to-[#ff8a3d] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                 <span className="text-white text-base font-black">S</span>
                             </div>
                             <span className={`text-2xl font-bold text-white ${anton.className}`}>

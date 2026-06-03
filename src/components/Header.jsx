@@ -25,6 +25,14 @@ const Header = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    useEffect(() => {
+        // Lock body scroll when mobile menu is open
+        if (typeof document !== 'undefined') {
+            document.body.style.overflow = mobileOpen ? 'hidden' : '';
+        }
+        return () => { if (typeof document !== 'undefined') document.body.style.overflow = ''; };
+    }, [mobileOpen]);
+
     return (
         <header
             className={`fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-[95%] max-w-7xl min-h-16 rounded-2xl flex items-center justify-between px-4 sm:px-6 py-3 transition-all duration-500 ${scrolled
@@ -49,7 +57,7 @@ const Header = () => {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-1">
                 {navLinks.map((link) => (
-                    <a
+                    <Link
                         key={link.label}
                         href={link.href}
                         className={`relative px-4 py-2 text-[14px] font-medium rounded-lg transition-all duration-200 hover:bg-white/10 ${scrolled
@@ -58,7 +66,7 @@ const Header = () => {
                             }`}
                     >
                         {link.label}
-                    </a>
+                    </Link>
                 ))}
             </nav>
 
@@ -88,22 +96,22 @@ const Header = () => {
             <div className={`absolute top-full left-0 right-0 mt-3 md:hidden bg-white/90 backdrop-blur-xl rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-96 opacity-100 p-4" : "max-h-0 opacity-0 p-0 border-0"}`}>
                 <nav className="flex flex-col gap-1">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.label}
                             href={link.href}
                             onClick={() => setMobileOpen(false)}
                             className="px-4 py-3 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
                         >
                             {link.label}
-                        </a>
+                        </Link>
                     ))}
-                    <a
-                        href="#contact"
+                    <Link
+                        href="/contact"
                         onClick={() => setMobileOpen(false)}
                         className="mt-2 text-center px-6 py-3 rounded-xl text-sm font-semibold text-white bg-linear-to-r from-[#ff6200] to-[#ff8a3d] shadow-md"
                     >
                         Get Started
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </header>

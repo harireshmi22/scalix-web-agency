@@ -40,8 +40,8 @@ const Home = () => {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-size-[4rem_4rem] [radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
             {/* Glowing Ambient Orbs */}
-            <div className="absolute -bottom-24 -left-24 h-48 w-48 sm:-bottom-48 sm:-left-48 sm:h-72 sm:w-72[18rem] lg:h-150 lg:w-150 rounded-full bg-[#FFA369] blur-[240px] opacity-[0.22] animate-pulse duration-[10s] pointer-events-none" />
-            <div className="absolute -top-24 right-[-12%] h-56 w-56 sm:-top-48 sm:right-[-10%] sm:h-72 sm:w-[20rem] lg:h-150 lg:w-200 rounded-full bg-[#D6F1FF] blur-[220px] opacity-[0.18] animate-pulse duration-[12s] pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 h-48 w-48 sm:-bottom-48 sm:-left-48 sm:h-72 sm:w-[18rem] lg:h-[22rem] lg:w-[22rem] rounded-full bg-[#FFA369] blur-[240px] opacity-[0.22] animate-pulse duration-[10s] pointer-events-none" />
+            <div className="absolute -top-24 right-[-12%] h-56 w-56 sm:-top-48 sm:right-[-10%] sm:h-72 sm:w-[20rem] lg:h-[22rem] lg:w-[28rem] rounded-full bg-[#D6F1FF] blur-[220px] opacity-[0.18] animate-pulse duration-[12s] pointer-events-none" />
             <div className="absolute top-1/3 left-1/3 h-24 w-24 sm:h-40 sm:w-40 rounded-full bg-[#8b5cf6] blur-[150px] opacity-[0.12] pointer-events-none" />
 
             {/* Main Interactive Grid */}
@@ -61,7 +61,7 @@ const Home = () => {
                     </div>
 
                     {/* Majestic Title Headline */}
-                    <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[38px] sm:text-[54px] text-[32px] sm:text-[44px] md:text-[56px] text-[32px] sm:text-[44px] md:text-[56px] text-[32px] sm:text-[44px] md:text-[56px] text-[32px] sm:text-[44px] md:text-[56px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
+                    <h1 className={`home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-100 text-[32px] sm:text-[44px] md:text-[56px] lg:text-[72px] leading-[1.05] font-bold text-white tracking-tight ${anton.className}`}>
                         Make your <span className="relative inline-block px-1">
                             {/* Backdrop highlight block */}
                             <span className="absolute inset-0 bg-[#FFA369]/10 rounded-2xl -rotate-1 blur-[2px]" />
@@ -106,13 +106,14 @@ const Home = () => {
                 </div>
 
                 {/* Right Interactive Card / Illustration */}
-                <div className="w-160 max-w-[420px] sm:max-w-[560px] lg:max-w-none mx-auto lg:mx-0">
+                <div className="w-full max-w-[420px] sm:max-w-[560px] mx-auto lg:mx-0 lg:max-w-none">
                     {/* Backside ambient glow board */}
 
                     <Image
                         src={homes}
                         alt="Scalix Digital Illustration"
                         className="w-full h-full object-contain p-0 sm:p-4 lg:p-8 select-none transition-transform duration-[1.5s] ease-out group-hover:scale-105 mix-blend-multiply"
+                        sizes="(max-width: 1024px) 100vw, 420px"
                         priority
                     />
                 </div>

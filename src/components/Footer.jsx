@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import Link from 'next/link'
 import { anton, architectsDaughter, geologica } from "@/lib/fonts"
 
 const Footer = () => {
@@ -18,14 +19,14 @@ const Footer = () => {
 
                     {/* Left Column: Brand & Description */}
                     <div className="lg:col-span-4 flex flex-col gap-6">
-                        <a href="#home" className="flex items-center gap-1.5 group self-start">
+                        <Link href="/" className="flex items-center gap-1.5 group self-start">
                             <div className="h-9 w-9 rounded-xl bg-linear-to-br from-[#ff6200] to-[#ff8a3d] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                 <span className="text-white text-base font-black">S</span>
                             </div>
                             <span className={`text-2xl font-bold text-white ${anton.className}`}>
                                 Scalix
                             </span>
-                        </a>
+                        </Link>
                         <p className={`text-gray-300 text-[14.5px] leading-relaxed max-w-full md:max-w-[360px] ${geologica.className}`}>
                             Building modern, scalable, and high-performance websites for businesses and creators. We specialize in MERN, Next.js, and visually stunning digital products that scale.
                         </p>
@@ -58,14 +59,19 @@ const Footer = () => {
                                 Company
                             </h3>
                             <ul className={`flex flex-col gap-3 text-[14px] text-gray-400 ${geologica.className}`}>
-                                {["Home", "Services", "Projects", "Team"].map((item) => (
-                                    <li key={item}>
-                                        <a
-                                            href={`#${item.toLowerCase()}`}
+                                {[
+                                    { label: "Home", href: "/" },
+                                    { label: "Services", href: "/service" },
+                                    { label: "Projects", href: "/project" },
+                                    { label: "Team", href: "/about" }
+                                ].map((item) => (
+                                    <li key={item.label}>
+                                        <Link
+                                            href={item.href}
                                             className="hover:text-[#FFA369] transition-colors duration-200"
                                         >
-                                            {item}
-                                        </a>
+                                            {item.label}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -79,12 +85,12 @@ const Footer = () => {
                             <ul className={`flex flex-col gap-3 text-[14px] text-gray-400 ${geologica.className}`}>
                                 {["Web Solutions", "Web Development", "UI / UX Design", "Maintenance"].map((item) => (
                                     <li key={item}>
-                                        <a
-                                            href="#services"
+                                        <Link
+                                            href="/service"
                                             className="hover:text-[#FFA369] transition-colors duration-200"
                                         >
                                             {item}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

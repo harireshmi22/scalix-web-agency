@@ -58,8 +58,19 @@ export const metadata: Metadata = {
     "Scalix Web Agency Services",
     "single page website",
     "landing page website",
+    "web design and development",
+    "figma to website",
     "multi page website",
-    "SEO Optimized Website Design"
+    "SEO Optimized Website Design",
+    "web design and development services",
+    "web development company in lucknow",
+    "web development company in lucknow for small business",
+    "web development company in lucknow for startup",
+    "scalix web agency team",
+    "scalix founders",
+    "Web application development company",
+    "Web service and hosting company",
+    "web design and development agency"
   ],
 
   authors: [{ name: "Scalix Web Agency", url: BASE_URL }],

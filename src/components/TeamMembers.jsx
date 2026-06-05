@@ -85,7 +85,7 @@ const TeamMembers = () => {
             {/* Header */}
             <div className='team-header w-full flex flex-col items-center mt-10 sm:mt-15 opacity-0 translate-y-8 transition-all duration-700 ease-out'>
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[250px] h-12">
-                    <h2 className="text-sm font-bold text-gray-500 tracking-widest">OUR TEAM MEMBERS</h2>
+                    <span className="text-sm font-bold text-gray-500 tracking-widest">OUR TEAM MEMBERS</span>
                 </div>
 
                 <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-normal text-gray-900 text-center ${anton.className}`}>

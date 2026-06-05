@@ -1,5 +1,6 @@
 "use client"
 import React, { useRef, useEffect } from 'react'
+import Link from 'next/link'
 import { anton, architectsDaughter, geologica } from "@/lib/fonts"
 
 
@@ -58,19 +59,19 @@ const Banner = () => {
                 {/* Buttons */}
                 <div className="relative z-10 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-5 mt-10 w-full">
                     {/* Primary Button */}
-                    <a
-                        href="#contact"
+                    <Link
+                        href="/contact"
                         className="group relative w-full sm:w-auto justify-center px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-black bg-gradient-to-r from-[#FFA369] to-[#FFB78A] shadow-xl shadow-orange-950/30 hover:shadow-orange-400/40 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                     >
                         <span>Start Your Project</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="black" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                         </svg>
-                    </a>
+                    </Link>
 
                     {/* Secondary Button */}
-                    <a
-                        href="#projects"
+                    <Link
+                        href="/project"
                         className="group relative w-full sm:w-auto justify-center px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-white border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/20 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 cursor-pointer"
                     >
                         <span>View Portfolio</span>
@@ -78,7 +79,7 @@ const Banner = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
 

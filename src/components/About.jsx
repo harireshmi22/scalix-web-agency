@@ -97,9 +97,9 @@ const About = () => {
                     {/* Section Badge */}
                     <div className="about-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex items-center mb-6">
                         <div className="rounded-full px-5 py-2 flex items-center justify-center border border-gray-300 bg-white/50 backdrop-blur-sm">
-                            <h2 className={`text-xs font-extrabold text-gray-500 tracking-widest uppercase ${geologica.className}`}>
+                            <span className={`text-xs font-extrabold text-gray-500 tracking-widest uppercase ${geologica.className}`}>
                                 Who We Are
-                            </h2>
+                            </span>
                         </div>
                     </div>
 

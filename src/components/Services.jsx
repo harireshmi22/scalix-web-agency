@@ -64,7 +64,7 @@ const Services = () => {
             {/* Section Badge */}
             <div className="svc-anim opacity-0 translate-y-6 transition-all duration-700 ease-out">
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[280px] h-12">
-                    <h2 className="text-sm font-bold text-gray-500 tracking-widest">TRUSTED DIGITAL PARTNERS</h2>
+                    <span className="text-sm font-bold text-gray-500 tracking-widest">TRUSTED DIGITAL PARTNERS</span>
                 </div>
             </div>
 
@@ -73,9 +73,9 @@ const Services = () => {
 
                 {/* Left — Text Content */}
                 <div className="svc-anim opacity-0 translate-y-6 md:-translate-x-10 transition-all duration-700 ease-out delay-100 w-full md:w-1/2">
-                    <h3 className={`text-[32px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
+                    <h2 className={`text-[32px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
                         Complete <span className={`text-[#C24700] ${architectsDaughter.className}`}>Web Solutions</span> & Management
-                    </h3>
+                    </h2>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-6 max-w-xl ${geologica.className}`}>
                         We don&apos;t just build websites — we handle the complete digital infrastructure behind your business.

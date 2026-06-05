@@ -96,9 +96,9 @@ const Service = () => {
 
                 {/* Right — Text Content */}
                 <div className="svc2-anim opacity-0 translate-x-10 transition-all duration-700 ease-out delay-150 w-full md:w-1/2">
-                    <h3 className={`text-[30px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
+                    <h2 className={`text-[30px] sm:text-[40px] leading-tight text-gray-900 ${anton.className}`}>
                         Building <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Scalable</span> Digital Experiences
-                    </h3>
+                    </h2>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-6 max-w-xl ${geologica.className}`}>
                         We don&apos;t just build websites — we handle the complete digital infrastructure behind your business.

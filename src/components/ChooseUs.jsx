@@ -69,7 +69,7 @@ const ChooseUs = () => {
             {/* Section Badge */}
             <div className="cu-anim opacity-0 translate-y-6 transition-all duration-700 ease-out">
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[200px] h-12">
-                    <h2 className="text-sm font-bold text-gray-500 tracking-widest">WHY CHOOSE US</h2>
+                    <span className="text-sm font-bold text-gray-500 tracking-widest">WHY CHOOSE US</span>
                 </div>
             </div>
 

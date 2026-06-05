@@ -77,8 +77,8 @@ const OurService = () => {
 
             {/* Header */}
             <div className='w-full flex flex-col items-center mt-10 sm:mt-15'>
-                <div className="rounded-4xl flex items-center justify-center">
-                    <h2 className={`${anton.className} text-[26px] sm:text-[32px] md:text-[36px] font-bold text-gray-900`}>Our Services</h2>
+                <div className="rounded-full px-5 py-2 flex items-center justify-center border border-gray-300 bg-white/50 backdrop-blur-sm">
+                    <span className={`text-xs font-extrabold text-gray-500 tracking-widest uppercase ${geologica.className}`}>Our Services</span>
                 </div>
                 <h2 className={`text-[28px] sm:text-[36px] mt-10 sm:mt-20 font-normal max-w-4xl text-gray-900 text-center ${anton.className}`}>
                     Our <span className={`text-[#C24700] ${architectsDaughter.className}`}>mission</span> Is To Make Your <span className={`text-[#0066ff] ${architectsDaughter.className}`}>Business</span> Better Through Technology

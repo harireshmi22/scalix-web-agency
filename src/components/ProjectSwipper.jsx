@@ -28,9 +28,9 @@ function ProjectSwipper() {
     return (
         <section className='w-full flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden'>
 
-            <h1 className={`max-w-5xl text-[26px] sm:text-[36px] md:text-[44px] font-black ${anton.className} text-center mt-14 sm:mt-20 leading-tight`}>
+            <h2 className={`max-w-5xl text-[26px] sm:text-[36px] md:text-[44px] font-black ${anton.className} text-center mt-14 sm:mt-20 leading-tight`}>
                 At <span className={`${architectsDaughter.className} text-[#C24700]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#C24700]`}>modern applications</span>
-                for businesses</h1>
+                for businesses</h2>
             <section className='relative border w-full min-h-120 sm:min-h-152 lg:min-h-192 overflow-hidden bg-[#15157D] mt-10 sm:mt-20 flex items-center justify-center py-10 sm:py-14'>
                 {/* Orange glow - left bottom */}
                 <div className="absolute -bottom-24 -left-24 sm:-bottom-40 sm:-left-40 h-48 w-60 sm:h-80 sm:w-120 rounded-full bg-[#FFA369] blur-[180px]" />

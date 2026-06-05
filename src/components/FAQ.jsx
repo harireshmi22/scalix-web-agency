@@ -76,11 +76,31 @@ const FAQ = () => {
         return () => observer.disconnect();
     }, []);
 
+    // JSON-LD Structured Data for FAQ
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqData.map((item) => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer,
+            },
+        })),
+    };
+
     return (
         <section
             ref={sectionRef}
             className="w-full flex flex-col items-center relative overflow-hidden mt-16 sm:mt-24 md:mt-30 px-4 sm:px-6 pb-10"
         >
+            {/* FAQ Structured Data for Google SEO */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+
             {/* Background Glows */}
             <div className="absolute -bottom-60 -left-40 h-[400px] w-[700px] rounded-full bg-[#D6F1FF] blur-[350px] opacity-40" />
             <div className="absolute -top-40 -right-60 h-[350px] w-[600px] rounded-full bg-[#FFA369] blur-[300px] opacity-25" />
@@ -88,7 +108,7 @@ const FAQ = () => {
             {/* Header */}
             <div className="faq-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col items-center">
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 w-[100px] h-12">
-                    <h2 className="text-sm font-bold text-gray-500 tracking-widest">FAQ</h2>
+                    <span className="text-sm font-bold text-gray-500 tracking-widest">FAQ</span>
                 </div>
                 <h2 className={`text-[30px] sm:text-[36px] mt-8 sm:mt-10 font-semibold text-gray-900 text-center max-w-2xl ${anton.className}`}>
                     Frequently Asked <span className={`text-[#C24700] ${architectsDaughter.className}`}>Questions</span>

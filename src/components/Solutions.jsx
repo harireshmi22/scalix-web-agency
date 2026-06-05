@@ -66,7 +66,7 @@ const Solutions = () => {
             {/* Section Badge */}
             <div className="sol-anim opacity-0 translate-y-6 transition-all duration-700 ease-out">
                 <div className="rounded-4xl flex items-center justify-center border border-gray-300 h-12 px-6 sm:px-8">
-                    <h2 className="text-xs sm:text-sm font-bold text-gray-500 tracking-widest text-center">WEB SOLUTIONS FOR EVERY SECTOR</h2>
+                    <span className="text-xs sm:text-sm font-bold text-gray-500 tracking-widest text-center">WEB SOLUTIONS FOR EVERY SECTOR</span>
                 </div>
             </div>
 
@@ -99,10 +99,10 @@ const Solutions = () => {
 
                 {/* Right — Text + Solution Items */}
                 <div className="sol-anim opacity-0 translate-y-6 md:translate-x-10 transition-all duration-700 ease-out delay-300 w-full md:w-7/12">
-                    <h3 className={`text-[28px] sm:text-[32px] leading-tight text-gray-900 ${anton.className}`}>
+                    <h2 className={`text-[28px] sm:text-[32px] leading-tight text-gray-900 ${anton.className}`}>
                         Modern <span className={`text-[#C24700] ${architectsDaughter.className}`}>Web Solutions</span> Designed for{" "}
                         <span className={`text-[#C24700] ${architectsDaughter.className}`}>Growth</span>
-                    </h3>
+                    </h2>
 
                     <p className={`text-[15px] leading-relaxed text-gray-500 mt-4 max-w-xl ${geologica.className}`}>
                         We create modern websites and web applications that help businesses grow online with better performance, clean design, secure hosting, and long-term scalability.

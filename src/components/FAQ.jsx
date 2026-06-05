@@ -133,7 +133,8 @@ const FAQ = () => {
             <style jsx>{`
                 .faq-animate-in {
                     opacity: 1 !important;
-                    transform: translateY(0) !important;
+                    transform: none !important;
+                    translate: none !important;
                 }
             `}</style>
         </section>

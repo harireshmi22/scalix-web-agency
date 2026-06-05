@@ -483,7 +483,8 @@ export default function FeaturePage() {
             <style jsx>{`
                 .feat-animate-in {
                     opacity: 1 !important;
-                    transform: translateY(0) !important;
+                    transform: none !important;
+                    translate: none !important;
                 }
             `}</style>
         </main >

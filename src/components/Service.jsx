@@ -143,7 +143,8 @@ const Service = () => {
             <style jsx>{`
                 .svc2-animate-in {
                     opacity: 1 !important;
-                    transform: translate(0, 0) !important;
+                    transform: none !important;
+                    translate: none !important;
                 }
             `}</style>
         </section>

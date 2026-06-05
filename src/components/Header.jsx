@@ -93,7 +93,7 @@ const Header = () => {
             </button>
 
             {/* Mobile Dropdown */}
-            <div className={`absolute top-full left-0 right-0 mt-3 md:hidden bg-white/90 backdrop-blur-xl rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-96 opacity-100 p-4" : "max-h-0 opacity-0 p-0 border-0"}`}>
+            <div className={`absolute top-full left-0 right-0 mt-3 md:hidden bg-white rounded-2xl border border-gray-200/60 shadow-xl overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-96 opacity-100 p-4" : "max-h-0 opacity-0 p-0 border-0"}`}>
                 <nav className="flex flex-col gap-1">
                     {navLinks.map((link) => (
                         <Link

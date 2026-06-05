@@ -111,7 +111,7 @@ const Footer = () => {
                         </div>
 
                         {/* Col 4: Contact info */}
-                        <div className="flex flex-col gap-5 col-span-2 sm:col-span-1">
+                        <div className="flex flex-col gap-5">
                             <h3 className={`text-white text-[15px] tracking-wider uppercase font-bold ${anton.className}`}>
                                 Get in Touch
                             </h3>

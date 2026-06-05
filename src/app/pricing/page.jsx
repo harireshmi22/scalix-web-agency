@@ -317,7 +317,7 @@ export default function PricingPage() {
                             <div
                                 key={idx}
                                 className={`price-anim opacity-0 translate-y-8 transition-all duration-700 ease-out group relative rounded-3xl border backdrop-blur-md p-7 sm:p-8 flex flex-col ${tier.popular
-                                    ? "border-[#0066ff]/40 bg-white/10 shadow-2xl shadow-blue-500/10 scale-[1.02] lg:scale-105"
+                                    ? "border-[#0066ff]/40 bg-white/10 shadow-2xl shadow-blue-500/10 lg:scale-105"
                                     : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/8"
                                     } transition-all duration-300`}
                                 style={{ transitionDelay: `${150 + idx * 100}ms` }}
@@ -471,7 +471,7 @@ export default function PricingPage() {
                             <div
                                 key={idx}
                                 className={`price-anim opacity-0 translate-y-8 transition-all duration-700 ease-out group relative rounded-3xl border backdrop-blur-md p-7 sm:p-8 flex flex-col ${plan.popular
-                                    ? "border-[#0066ff]/30 bg-linear-to-b from-[#0066ff]/5 to-transparent shadow-xl shadow-blue-100/30 scale-[1.02] md:scale-105"
+                                    ? "border-[#0066ff]/30 bg-linear-to-b from-[#0066ff]/5 to-transparent shadow-xl shadow-blue-100/30 lg:scale-105"
                                     : "border-gray-200 bg-white/60 hover:border-gray-300 hover:shadow-lg hover:shadow-gray-200/30"
                                     } transition-all duration-300`}
                                 style={{ transitionDelay: `${200 + idx * 100}ms` }}

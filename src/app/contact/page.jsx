@@ -187,7 +187,7 @@ export default function ContactPage() {
 
             {/* ── Contact Info Cards ── */}
             <section className="relative px-4 sm:px-6 md:px-12 lg:px-20 pb-16 sm:pb-24">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
                     {contactInfo.map((info, idx) => (
                         <a
                             key={info.title}
@@ -314,7 +314,7 @@ export default function ContactPage() {
                                             placeholder="John Doe"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[14px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 ${geologica.className}`}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[16px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 ${geologica.className}`}
                                         />
                                     </div>
 
@@ -340,7 +340,7 @@ export default function ContactPage() {
                                             required
                                             value={formData.service}
                                             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white text-[14px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 appearance-none cursor-pointer ${geologica.className}`}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white text-[16px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 appearance-none cursor-pointer ${geologica.className}`}
                                             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '20px' }}
                                         >
                                             <option value="" className="bg-[#1a1a6e] text-gray-400">Select a service...</option>
@@ -364,7 +364,7 @@ export default function ContactPage() {
                                             placeholder="Describe your project, timeline, and any specific requirements..."
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[14px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 resize-none ${geologica.className}`}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[16px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 resize-none ${geologica.className}`}
                                         />
                                     </div>
 

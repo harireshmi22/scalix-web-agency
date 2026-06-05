@@ -142,7 +142,7 @@ const About = () => {
             <style jsx>{`
                 .about-animate-in {
                     opacity: 1 !important;
-                    transform: translateY(0) !important;
+                    transform: translate(0, 0) !important;
                 }
             `}</style>
         </section>

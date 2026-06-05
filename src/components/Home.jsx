@@ -109,7 +109,7 @@ const Home = () => {
 
             {/* Bottom Key Metrics Row */}
             <div className="relative z-10 w-full max-w-7xl mx-auto mt-14 lg:mt-24 border-t border-white/10 pt-8 sm:pt-10">
-                <div className="grid grid-cols-3 gap-6 text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
                     {keyMetrics.map((metric, idx) => (
                         <div
                             key={idx}

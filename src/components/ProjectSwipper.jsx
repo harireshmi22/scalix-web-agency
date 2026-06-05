@@ -28,8 +28,8 @@ function ProjectSwipper() {
     return (
         <section className='w-full flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden'>
 
-            <h2 className={`max-w-5xl text-[26px] sm:text-[36px] md:text-[44px] font-black ${anton.className} text-center mt-14 sm:mt-20 leading-tight`}>
-                At <span className={`${architectsDaughter.className} text-[#C24700]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#C24700]`}>modern applications</span>
+            <h2 className={`max-w-5xl text-[26px] sm:text-[36px] md:text-[44px] font-black ${anton.className} text-center mt-14 sm:mt-20 leading-normal sm:leading-tight`}>
+                At <span className={`${architectsDaughter.className} text-[#C24700]`}>Scalix</span> Web Agency, we build <span className={`${architectsDaughter.className} text-[#C24700]`}>modern applications</span>{" "}
                 for businesses</h2>
             <section className='relative border w-full min-h-120 sm:min-h-152 lg:min-h-192 overflow-hidden bg-[#15157D] mt-10 sm:mt-20 flex items-center justify-center py-10 sm:py-14'>
                 {/* Orange glow - left bottom */}

@@ -278,7 +278,7 @@ export default function FeaturePage() {
                 <div className="max-w-6xl mx-auto">
                     {/* Section header */}
                     <div className="text-center mb-14 sm:mb-18">
-                        <div className="feat-anim opacity-0 translate-y-6 transition-all duration-700 ease-out inline-flex items-center justify-center rounded-full px-5 py-2 border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+                        <div className="feat-anim opacity-0 translate-y-6 transition-all duration-700 ease-out inline-flex items-center justify-center rounded-full px-5 py-2 border border-gray-300 bg-white/50 backdrop-blur-sm mb-6">
                             <span className={`text-gray-900 text-[11px] uppercase tracking-widest font-extrabold ${geologica.className}`}>
                                 Our Core Features
                             </span>
@@ -297,7 +297,7 @@ export default function FeaturePage() {
                         {coreFeatures.map((feature, idx) => (
                             <div
                                 key={idx}
-                                className="feat-anim opacity-0 translate-y-8 transition-all duration-700 ease-out group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 sm:p-7 hover:border-white/20 hover:bg-white/8 cursor-default"
+                                className="feat-anim opacity-0 translate-y-8 transition-all duration-700 ease-out group relative rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-md p-6 sm:p-7 hover:border-gray-300 hover:bg-white/80 hover:shadow-xl hover:shadow-gray-200/40 cursor-default"
                                 style={{ transitionDelay: `${150 + idx * 80}ms` }}
                                 onMouseEnter={() => setActiveFeature(idx)}
                                 onMouseLeave={() => setActiveFeature(null)}
@@ -342,9 +342,9 @@ export default function FeaturePage() {
                                                 key={tIdx}
                                                 className={`text-[11px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border transition-all duration-300 ${geologica.className}`}
                                                 style={{
-                                                    color: activeFeature === idx ? feature.color : '#9ca3af',
-                                                    borderColor: activeFeature === idx ? `${feature.color}40` : 'rgba(255,255,255,0.08)',
-                                                    backgroundColor: activeFeature === idx ? `${feature.color}10` : 'rgba(255,255,255,0.03)',
+                                                    color: activeFeature === idx ? feature.color : '#6b7280',
+                                                    borderColor: activeFeature === idx ? `${feature.color}40` : '#e5e7eb',
+                                                    backgroundColor: activeFeature === idx ? `${feature.color}10` : '#f9fafb',
                                                 }}
                                             >
                                                 {tag}
@@ -368,7 +368,7 @@ export default function FeaturePage() {
                 <div className="max-w-5xl mx-auto">
                     {/* Section header */}
                     <div className="text-center mb-14 sm:mb-18">
-                        <div className="feat-anim opacity-0 translate-y-6 transition-all duration-700 ease-out inline-flex items-center justify-center rounded-full px-5 py-2 border border-white/10 bg-white/5 backdrop-blur-md mb-6">
+                        <div className="feat-anim opacity-0 translate-y-6 transition-all duration-700 ease-out inline-flex items-center justify-center rounded-full px-5 py-2 border border-gray-300 bg-white/50 backdrop-blur-sm mb-6">
                             <span className={`text-gray-900 text-[11px] uppercase tracking-widest font-extrabold ${geologica.className}`}>
                                 How It Works
                             </span>
@@ -392,13 +392,13 @@ export default function FeaturePage() {
                             >
                                 {/* Connector line (hidden on last item and on mobile single column) */}
                                 {idx < processSteps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-10 -right-3 w-6 h-[2px] bg-gradient-to-r from-white/20 to-white/5" />
+                                    <div className="hidden lg:block absolute top-10 -right-3 w-6 h-[2px] bg-gradient-to-r from-gray-300 to-gray-100" />
                                 )}
 
-                                <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-6 hover:border-white/20 hover:bg-white/8 transition-all duration-300 h-full flex flex-col">
+                                <div className="rounded-2xl border border-gray-200 bg-white/60 backdrop-blur-md p-6 hover:border-gray-300 hover:bg-white/80 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                                     {/* Step number + icon row */}
                                     <div className="flex items-center justify-between mb-5">
-                                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#ff6200] to-[#ff8a3d] flex items-center justify-center text-black shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#ff6200] to-[#ff8a3d] flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                             {step.icon}
                                         </div>
                                         <span className={`text-[28px] font-bold text-gray-500 group-hover:text-[#FFA369]/30 transition-colors duration-300 ${anton.className}`}>

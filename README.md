@@ -2,7 +2,7 @@
   <img src="public/logo.jpeg" alt="Scalix Logo" width="80" height="80" style="border-radius: 50%;" />
 </p>
 
-<h1 align="center">Scalix — Web Agency</h1>
+<h1 align="center">Scalix — Website Development Agency</h1>
 
 <p align="center">
   <strong>Premium, scalable, and high-performance websites for businesses and creators.</strong><br />
@@ -22,7 +22,7 @@
 
 ## ✨ Overview
 
-**Scalix** is a modern web agency website that showcases bespoke digital services — from custom website development and UI/UX design to full-stack web applications, SEO optimization, and ongoing maintenance. The site itself is a living portfolio: every pixel is crafted with premium aesthetics, smooth scroll-triggered animations, and a fully responsive layout that looks stunning on every screen size.
+**Scalix** is a premium, modern web agency website showcasing bespoke digital services — custom website development, frontend/backend engineering, UI/UX designs, and secure hosting deployments. The codebase is highly optimized for Google search index rankings, utilizing strict semantic HTML guidelines, automated sitemaps, responsive media formatting, and interactive JSON-LD structured schema blocks for search engine result integration.
 
 ---
 
@@ -32,13 +32,20 @@
 - **Smooth Scrolling** — Lenis-powered buttery-smooth scrolling experience across the entire site.
 - **Interactive Project Showcase** — Swiper-based carousel with touch-friendly project previews.
 - **Comprehensive Services** — Dedicated sections for web solutions, development services, and why clients should choose Scalix.
-- **Transparent Pricing** — Multi-tier pricing tables (Starter / Professional / Agency), per-page custom pricing, à la carte add-on services, and monthly maintenance plans.
+- **Transparent Pricing Model** — Realigned packages based on project scope:
+  - **Website Packages**: Starter (₹4,999 - ₹9,999), Professional (₹14,999 - ₹29,999), and Enterprise (₹39,999+) packages.
+  - **Hosting Packages**: Basic (3 months), Standard (5 months), and Premium (12 months) reliable cloud hosting.
+  - **Why Choose Scalix**: Custom value grid explaining core differentiators (Engineers, Bespoke Design, Security, Support).
+- **Custom 404 Page** — Premium branded `not-found.tsx` catch-all route with custom styling, glows, and smooth subpage navigations.
 - **Team Profiles** — Meet the people behind Scalix with an elegant team grid.
 - **FAQ Accordion** — Expandable frequently asked questions with smooth open/close transitions.
-- **Call-to-Action Banner** — Conversion-focused CTA section to drive inquiries.
+- **SEO & Google Ranking Optimization**:
+  - Strict **single-H1 hierarchy** per page for cleaner search indexing.
+  - Interactive **JSON-LD FAQPage Rich Snippet schemas** embedded dynamically into the DOM.
+  - Complete elimination of broken hash links in Footer/Banner navigation; upgraded to Next.js `<Link>` router paths.
+- **PWA Ready** — Upgraded `manifest.ts` featuring orientation parameters, categories, maskable/any PWA icon arrays, and standalone scope alignment.
 - **Glassmorphic Navigation** — Floating header with backdrop blur that adapts on scroll — transparent on top, frosted-glass on scroll.
 - **Mobile-First Design** — Fully responsive from 320px to ultrawide displays with a polished hamburger menu.
-- **SEO Optimized** — Semantic HTML, meta tags, structured headings, and schema-ready markup.
 
 ---
 
@@ -96,47 +103,67 @@ npm start
 npm run lint
 ```
 
+> [!TIP]
+> **Windows Execution Policy / PowerShell Bypass**:
+> If you are developing on Windows and encounter execution policy restrictions when running scripts (e.g., `npm run dev` or `npm run build`), you can run the commands using the Command Prompt shell wrapper:
+> ```bash
+> cmd /c npm run dev
+> cmd /c npm run build
+> cmd /c npm start
+> ```
+
 ---
+
 
 ## 📁 Project Structure
 
 ```
 scalix-web-agency/
-├── public/                    # Static assets (images, icons, SVGs)
-│   ├── logo.jpeg              # Brand logo
-│   ├── hero.png               # Hero illustrations
-│   ├── service.png            # Service visuals
-│   ├── solutions.png          # Solutions artwork
-│   └── ...                    # Project & team images
+├── public/                            # Static assets (images, icons, SVGs)
+│   ├── logo.jpeg                      # Brand logo
+│   ├── hero.png                       # Hero illustrations
+│   ├── service.png                    # Service visuals
+│   ├── solutions.png                  # Solutions artwork
+│   └── ...                            # Project & team images
 │
 ├── src/
-│   ├── app/                   # Next.js App Router pages
-│   │   ├── layout.tsx         # Root layout (Header + LenisProvider + Footer)
-│   │   ├── page.tsx           # Home page
-│   │   ├── globals.css        # Global styles
-│   │   ├── about/             # About page
-│   │   ├── contact/           # Contact page
-│   │   ├── feature/           # Features page
-│   │   ├── pricing/           # Pricing page (tiers, add-ons, maintenance)
-│   │   ├── project/           # Projects page
-│   │   └── service/           # Services page
+│   ├── app/                           # Next.js App Router pages
+│   │   ├── layout.tsx                 # Root layout (Header + LenisProvider + Footer + JSON-LD)
+│   │   ├── page.tsx                   # Home page
+│   │   ├── not-found.tsx              # Custom 404 page
+│   │   ├── globals.css                # Global styles
+│   │   ├── manifest.ts                # PWA Manifest configuration
+│   │   ├── sitemap.ts                 # Dynamic sitemap generator
+│   │   ├── robots.ts                  # SEO crawler rules
+│   │   ├── icon.jpeg                  # Primary PWA/Favicon asset
+│   │   ├── apple-icon.jpeg            # Apple touch icon asset
+│   │   ├── about/                     # About page
+│   │   ├── contact/                   # Contact page
+│   │   ├── feature/                   # Features page
+│   │   ├── pricing/                   # Pricing page (Starter/Pro/Enterprise, Hosting, FAQ Schema)
+│   │   ├── project/                   # Projects page
+│   │   └── service/                   # Services page
 │   │
-│   └── components/            # Reusable UI components
-│       ├── Header.jsx         # Glassmorphic floating navigation
-│       ├── Footer.jsx         # Full-width footer with links & socials
-│       ├── Home.jsx           # Hero section with metrics bar
-│       ├── Services.jsx       # Services overview grid
-│       ├── Service.jsx        # Individual service details
-│       ├── Solutions.jsx      # Solutions showcase with image
-│       ├── ChooseUs.jsx       # Why Choose Us section
-│       ├── OurProject.jsx     # Project highlights
-│       ├── OurService.jsx     # Our service philosophy
-│       ├── ProjectSwipper.jsx # Swiper carousel for projects
-│       ├── TeamMembers.jsx    # Team grid with member cards
-│       ├── Banner.jsx         # CTA banner section
-│       ├── About.jsx          # About Us section
-│       ├── FAQ.jsx            # Accordion FAQ
-│       └── LenisProvider.jsx  # Lenis smooth-scroll context wrapper
+│   ├── components/                    # Reusable UI components
+│   │   ├── Header.jsx                 # Glassmorphic floating navigation
+│   │   ├── Footer.jsx                 # Full-width footer with Link routing
+│   │   ├── Home.jsx                   # Hero section with metrics bar
+│   │   ├── Services.jsx               # Services overview grid (fixed semantic headers)
+│   │   ├── Service.jsx                # Individual service details (fixed semantic headers)
+│   │   ├── Solutions.jsx              # Solutions showcase with image
+│   │   ├── ChooseUs.jsx               # Why Choose Us section
+│   │   ├── OurProject.jsx             # Project highlights
+│   │   ├── OurService.jsx             # Our service philosophy
+│   │   ├── ProjectSwipper.jsx         # Swiper carousel for projects (fixed H1 -> H2 header)
+│   │   ├── ProjectSwipperClient.jsx   # Dynamic client-side wrapper for Swiper component
+│   │   ├── TeamMembers.jsx            # Team grid with member cards
+│   │   ├── Banner.jsx                 # CTA banner section
+│   │   ├── About.jsx                  # About Us section
+│   │   ├── FAQ.jsx                    # Accordion FAQ with Google FAQPage Schema
+│   │   └── LenisProvider.jsx          # Lenis smooth-scroll context wrapper
+│   │
+│   └── lib/
+│       └── fonts.js                   # Font definitions (Anton, Architects Daughter, Geologica)
 │
 ├── package.json
 ├── tsconfig.json
@@ -154,11 +181,12 @@ scalix-web-agency/
 |---|---|
 | `/` | Home — Hero, services, solutions, projects carousel, team, FAQ |
 | `/service` | Detailed breakdown of all development services offered |
-| `/pricing` | Transparent pricing tiers, per-page pricing, add-ons, maintenance plans |
+| `/pricing` | Transparent website and hosting packages, value propositions, FAQ |
 | `/project` | Portfolio of completed projects and case studies |
 | `/feature` | Core features and capabilities of the Scalix platform |
 | `/about` | Company story, mission, and values |
 | `/contact` | Get in touch — inquiry form and contact details |
+| *(unmatched)* | `not-found.tsx` fallback catches all invalid paths and displays custom UI |
 
 ---
 
@@ -167,7 +195,7 @@ scalix-web-agency/
 | Name | Role |
 |---|---|
 | **Hari Reshmi** | Manager & Coordinator |
-| **Kanishq Gautam** | MERN Developer |
+| **Kanishq Gautam** | Lead MERN Developer |
 | **Srestha Mishra** | AI/ML Developer |
 | **Kaushtubh Singh** | JS Developer |
 
@@ -179,20 +207,22 @@ The fastest way to deploy is with [Vercel](https://vercel.com/new?utm_medium=def
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/harireshmi22/scalix-web-agency)
 
-Alternatively, deploy to any Node.js hosting provider that supports Next.js (Netlify, Railway, AWS Amplify, etc.).
+Alternatively, deploy to Netlify, Railway, AWS Amplify, or any Node.js hosting platform.
 
 ---
 
-## 🔍 Project Notes & Audit
+## 🔍 Recent Upgrades & Audits
 
-- A short responsive/audit summary is available in `report.md` at the project root. Recent fixes include:
-  - Migrated internal header links to client-side `next/link` and added a mobile drawer scroll-lock.
-  - Hid the large hero illustration on small screens to avoid layout shifts and reduce mobile bandwidth.
-  - Added `sizes` to key `next/image` usages and clipped image wrappers with `overflow-hidden` to prevent decorative glows/animations from overlapping copy.
+- **Search Engine Optimization (SEO)**:
+  - Ensured only **one `<h1>` element** exists on the homepage (downgraded secondary elements in `ProjectSwipper.jsx`).
+  - Swapped out small text badges in several components (`About`, `Services`, `FAQ`, `TeamMembers`) from header tags (`h2`/`h3`) to styled non-heading `span` tags.
+  - Implemented dynamic **`FAQPage` JSON-LD structured data scripts** directly into FAQ modules to qualify for Google Rich snippet structures.
+- **Link Auditing**: Fixed broken hash fragments in the footer and main banners. All navigations now use router-safe client-side `<Link>` components to `/service`, `/project`, `/about`, and `/contact`.
+- **Pricing Overhaul**: Completely updated the pricing layout to showcase Starter, Professional, and Enterprise packages alongside duration-based Basic, Standard, and Premium hosting bundles.
+- **PWA Alignment**: Custom manifest configurations have been updated to support standard portrait orientations, application categories, and a maskable icon configuration for cross-platform app wrappers.
+- **Next.js 16 / React 19 Build Compatibility**: Tested and verified building via `npm run build` with clean compilation outputs across all static routes.
 
-- PWA / favicon: the app uses `public/icon.jpeg` and an `apple-icon.jpeg` for favicon and Apple touch icon; `src/app/manifest.ts` exports a manifest route wired to those assets.
-
-Refer to `report.md` for a detailed list of issues found and recommended next steps (Lighthouse audit, further `next/image` sizing, and performance tuning).
+---
 
 ## 📜 License
 

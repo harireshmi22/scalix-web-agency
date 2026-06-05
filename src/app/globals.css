@@ -1,10 +1,21 @@
 @import "tailwindcss";
+
+/* ── Base Responsive Safeguards ── */
+*,
+*::before,
+*::after {
+  min-width: 0; /* Prevent flex/grid children from overflowing */
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
+  /* Safe area insets for notched devices (iPhone X+) */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 img,
@@ -15,6 +26,15 @@ canvas {
   height: auto;
 }
 
+/* ── Swiper: Hide nav arrows on mobile, keep pagination dots ── */
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+/* ── Lenis Smooth Scroll ── */
 html.lenis,
 html.lenis body {
   height: auto;
@@ -31,4 +51,3 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-

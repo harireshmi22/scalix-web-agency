@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description:
       "Explore Scalix Web Agency pricing: Starter, Professional, and Agency website packages, custom per-page pricing, add-on services, and monthly maintenance plans. No hidden fees.",
     url: "https://scalix-web-agency.netlify.app/pricing",
-    siteName: "Scalix Web Agency",
+    siteName: "Scalix Website Development Agency",
     images: [
       {
         url: "/hero.png",

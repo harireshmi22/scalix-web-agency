@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Scalix Web Agency — Premium Web Development & Design',
+    name: 'Scalix Website Development Agency — Premium Web Development & Design',
     short_name: 'Scalix',
     description:
       'We build premium, scalable, and high-performance websites and web applications for businesses and creators. MERN, Next.js, UI/UX, SEO, and hosting.',

@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     description:
       "Browse our portfolio of agency websites, e-commerce platforms, AI-powered tools, and full-stack applications built by the Scalix team.",
     url: "https://scalix-web-agency.netlify.app/project",
-    siteName: "Scalix Web Agency",
+    siteName: "Scalix Website Development Agency",
     images: [
       {
         url: "/hero.png",
         width: 1200,
         height: 630,
-        alt: "Projects Scalix Web Agency",
+        alt: "Projects Scalix Website Development Agency",
       },
     ],
   },

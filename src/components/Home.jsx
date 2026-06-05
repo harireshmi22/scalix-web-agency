@@ -1,9 +1,10 @@
 "use client"
 import React, { useRef, useEffect } from 'react'
-const homesSrc = '/home-removebg-preview.avif';
 import Image from 'next/image'
 import { anton, architectsDaughter, geologica } from "@/lib/fonts"
 import Link from 'next/link'
+
+const homesSrc = '/home-removebg-preview.avif';
 
 const Home = () => {
     const sectionRef = useRef(null);
@@ -109,16 +110,16 @@ const Home = () => {
 
             {/* Bottom Key Metrics Row */}
             <div className="relative z-10 w-full max-w-7xl mx-auto mt-14 lg:mt-24 border-t border-white/10 pt-8 sm:pt-10">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+                <div className="grid grid-cols-3 gap-2 sm:gap-6 text-center">
                     {keyMetrics.map((metric, idx) => (
                         <div
                             key={idx}
                             className="home-anim opacity-0 translate-y-6 transition-all duration-700 ease-out flex flex-col items-center gap-2 justify-center"
                         >
-                            <span className={`text-[28px] sm:text-[32px] md:text-[40px] font-bold ${anton.className} ${metric.color}`}>
+                            <span className={`text-[22px] sm:text-[32px] md:text-[40px] font-bold ${anton.className} ${metric.color}`}>
                                 {metric.value}
                             </span>
-                            <span className={`text-sm text-gray-400 font-medium tracking-wide ${geologica.className}`}>
+                            <span className={`text-[10px] sm:text-sm text-gray-400 font-medium tracking-wide leading-tight ${geologica.className}`}>
                                 {metric.label}
                             </span>
                         </div>

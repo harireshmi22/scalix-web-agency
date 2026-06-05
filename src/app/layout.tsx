@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     apple: "/apple-icon.jpeg",
   },
   title: {
-    default: "Scalix Web Agency — Premium Web Development & Design",
-    template: "%s | Scalix Web Agency",
+    default: "Scalix Website Development Agency — Premium Web Development & Design",
+    template: "%s | Scalix Website Development Agency",
   },
   description:
-    "Scalix Web Agency builds premium, scalable, and high-performance websites and web applications. Specializing in Next.js, React, MERN stack, UI/UX design, SEO optimization, and hosting for businesses and creators.",
+    "Scalix Website Development Agency builds premium, scalable, and high-performance websites and web applications. Specializing in Next.js, React, MERN stack, UI/UX design, SEO optimization, and hosting for businesses and creators.",
   keywords: [
     "web development agency",
     "website designer",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Scalix",
     "lucknow web development company",
     "India web development",
-    "Indaina website development",
+    "Indian website development",
     "custom website development",
     "web agency in lucknow",
     "website development agency",
@@ -63,19 +63,24 @@ export const metadata: Metadata = {
     "multi page website",
     "SEO Optimized Website Design",
     "web design and development services",
-    "web development company in lucknow",
-    "web development company in lucknow for small business",
-    "web development company in lucknow for startup",
     "scalix web agency team",
     "scalix founders",
-    "Web application development company",
-    "Web service and hosting company",
+    "web agency India",
+    "Scalix helps startups",
+    "creators",
+    "and buissness build fast",
+    "and SEO-friendly websites using Next.js",
+    "AI-powered tools",
+    "full-stack applications",
+    "React",
+    "and MERN stack Technologies",
+    "web service and hosting company",
     "web design and development agency"
   ],
 
-  authors: [{ name: "Scalix Web Agency", url: BASE_URL }],
-  creator: "Scalix Web Agency",
-  publisher: "Scalix Web Agency",
+  authors: [{ name: "Scalix Website Development Agency", url: BASE_URL }],
+  creator: "Scalix Website Development Agency",
+  publisher: "Scalix Website Development Agency",
   formatDetection: {
     email: false,
     address: false,
@@ -85,8 +90,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: BASE_URL,
-    siteName: "Scalix Web Agency",
-    title: "Scalix Web Agency — Premium Web Development & Design",
+    siteName: "Scalix Website Development Agency",
+    title: "Scalix Website Development Agency — Premium Web Development & Design",
     description:
       "We architect premium, bespoke digital products that combine beautiful design, reliable functionality, and industry-leading performance to elevate your business.",
     images: [
@@ -100,7 +105,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scalix Web Agency — Premium Web Development & Design",
+    title: "Scalix Website Development Agency — Premium Web Development & Design",
     description:
       "We build secure, scalable, and high-performance websites for businesses and creators. Next.js · React · MERN · UI/UX · SEO.",
     images: ["/hero.png"],
@@ -125,7 +130,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Scalix Web Agency",
+  name: "Scalix Website Development Agency",
   url: BASE_URL,
   logo: `${BASE_URL}/logo.jpeg`,
   image: `${BASE_URL}/hero.png`,

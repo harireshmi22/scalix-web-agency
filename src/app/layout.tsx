@@ -75,7 +75,8 @@ export const metadata: Metadata = {
     "React",
     "and MERN stack Technologies",
     "web service and hosting company",
-    "web design and development agency"
+    "web design and development agency",
+    "website banwa lijiye"
   ],
 
   authors: [{ name: "Scalix Website Development Agency", url: BASE_URL }],

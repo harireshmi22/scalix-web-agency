@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     "web development services",
     "web development pricing",
     "web development cost",
+    "Web development services provider",
     "web development portfolio",
     "web development agency in lucknow",
     "web development agency in india",

@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 
 import { anton, architectsDaughter, geologica } from "@/lib/fonts";
+import Link from 'next/link';
 
 
 const whatsappNumber = "919555859701";
@@ -82,7 +83,7 @@ const contactInfo = [
             </svg>
         ),
     },
-    
+
     {
         title: "Location",
         value: "Coimbatore, Tamil Nadu",
@@ -97,22 +98,22 @@ const contactInfo = [
         ),
     },
     {
-    title: "Instagram",
-    value: "@scalix.hks",
-    href: "https://www.instagram.com/scalix.hks/",
-    color: "from-[#E1306C] to-[#C13584]",
-    iconBg: "bg-[#E1306C]/10",
-    icon: (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-6 h-6 text-[#E1306C]"
-        >
-            <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
-        </svg>
-    ),
-},
+        title: "Instagram",
+        value: "@scalix.hks",
+        href: "https://www.instagram.com/scalix.hks/",
+        color: "from-[#E1306C] to-[#C13584]",
+        iconBg: "bg-[#E1306C]/10",
+        icon: (
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6 text-[#E1306C]"
+            >
+                <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
+            </svg>
+        ),
+    },
 ];
 
 export default function ContactPage() {
@@ -148,10 +149,10 @@ export default function ContactPage() {
     };
 
     return (
-        <main ref={sectionRef} className="relative min-h-screen overflow-hidden bg-[#0d0d59]">
+        <main ref={sectionRef} className="relative min-h-screen overflow-hidden ">
 
             {/* ── Hero Section ── */}
-            <section className="relative pt-32 sm:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col items-center text-center">
+            <section className="relative pt-32 sm:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col items-center text-center bg-[#0d0d59]">
                 {/* Ambient Orbs */}
                 <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#FFA369] blur-[240px] opacity-20 pointer-events-none" />
                 <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#D6F1FF] blur-[220px] opacity-15 pointer-events-none" />
@@ -186,7 +187,7 @@ export default function ContactPage() {
             </section>
 
             {/* ── Contact Info Cards ── */}
-            <section className="relative px-4 sm:px-6 md:px-12 lg:px-20 pb-16 sm:pb-24">
+            <section className="relative px-4 sm:px-6 md:px-12 lg:px-20 pb-16 sm:pb-24 bg-[#0d0d59]">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
                     {contactInfo.map((info, idx) => (
                         <a
@@ -216,7 +217,7 @@ export default function ContactPage() {
             </section>
 
             {/* ── Main Content: WhatsApp Quick Messages + Contact Form ── */}
-            <section className="relative px-4 sm:px-6 md:px-12 lg:px-20 pb-20 sm:pb-28">
+            <section className="relative px-4 sm:px-6 md:px-12 lg:px-20 pb-20 sm:pb-28 bg-[#F8F9FC]">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
                     {/* Left: WhatsApp Quick Messages */}
@@ -229,10 +230,10 @@ export default function ContactPage() {
                                 </svg>
                             </div>
                             <div>
-                                <h2 className={`text-white text-xl sm:text-2xl font-bold ${anton.className}`}>
+                                <h2 className={`text-slate-900 text-xl sm:text-2xl font-bold ${anton.className}`}>
                                     Quick WhatsApp Messages
                                 </h2>
-                                <p className={`text-gray-400 text-sm ${geologica.className}`}>Tap to send a pre-formatted message</p>
+                                <p className={`text-slate-500 text-sm ${geologica.className}`}>Tap to send a pre-formatted message</p>
                             </div>
                         </div>
 
@@ -242,7 +243,7 @@ export default function ContactPage() {
                                 <button
                                     key={idx}
                                     onClick={() => handleWhatsAppClick(item.message)}
-                                    className="group w-full text-left rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-4 sm:p-5 hover:border-[#25D366]/40 hover:bg-[#25D366]/5 transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+                                    className="group w-full text-left rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 hover:border-[#25D366]/40 hover:bg-[#25D366]/5 transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] cursor-pointer shadow-sm hover:shadow-md"
                                     id={`whatsapp-msg-${idx}`}
                                 >
                                     <div className="flex items-start gap-4">
@@ -250,8 +251,8 @@ export default function ContactPage() {
                                             {item.icon}
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <h3 className={`text-white text-[15px] font-semibold mb-1 ${geologica.className}`}>{item.label}</h3>
-                                            <p className={`text-gray-400 text-[13px] leading-relaxed line-clamp-2 ${geologica.className}`}>{item.message}</p>
+                                            <h3 className={`text-slate-800 text-[15px] font-semibold mb-1 ${geologica.className}`}>{item.label}</h3>
+                                            <p className={`text-slate-500 text-[13px] leading-relaxed line-clamp-2 ${geologica.className}`}>{item.message}</p>
                                         </div>
                                         <div className="shrink-0 w-8 h-8 rounded-lg bg-[#25D366]/10 flex items-center justify-center text-[#25D366] opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
@@ -268,7 +269,7 @@ export default function ContactPage() {
                             href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Scalix! I'd like to discuss a project.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group mt-6 w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-[15px] font-bold tracking-wide text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] shadow-xl shadow-green-900/30 hover:shadow-green-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                            className="group mt-6 w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-[15px] font-bold tracking-wide text-white bg-gradient-to-r from-[#25D366] to-[#128C7E] shadow-lg shadow-green-200 hover:shadow-green-300 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                             id="whatsapp-direct-cta"
                         >
                             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -283,9 +284,9 @@ export default function ContactPage() {
 
                     {/* Right: Contact Form */}
                     <div className="contact-anim opacity-0 translate-y-6 transition-all duration-700 ease-out delay-200">
-                        <div className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 sm:p-8 overflow-hidden">
+                        <div className="relative rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 overflow-hidden shadow-lg shadow-slate-100/80">
                             {/* Decorative glow */}
-                            <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-[#ff6200]/15 blur-[80px] pointer-events-none" />
+                            <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-[#ff6200]/10 blur-[80px] pointer-events-none" />
                             <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-[#D6F1FF]/10 blur-[80px] pointer-events-none" />
 
                             <div className="relative z-10">
@@ -296,17 +297,17 @@ export default function ContactPage() {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h2 className={`text-white text-xl sm:text-2xl font-bold ${anton.className}`}>
+                                        <h2 className={`text-slate-900 text-xl sm:text-2xl font-bold ${anton.className}`}>
                                             Send a Message
                                         </h2>
-                                        <p className={`text-gray-400 text-sm ${geologica.className}`}>We&apos;ll reply via WhatsApp</p>
+                                        <p className={`text-slate-500 text-sm ${geologica.className}`}>We&apos;ll reply via WhatsApp</p>
                                     </div>
                                 </div>
 
                                 <form onSubmit={handleFormSubmit} className="flex flex-col gap-5">
                                     {/* Name */}
                                     <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="contact-name" className={`text-gray-300 text-sm font-medium ${geologica.className}`}>Your Name</label>
+                                        <label htmlFor="contact-name" className={`text-slate-700 text-sm font-medium ${geologica.className}`}>Your Name</label>
                                         <input
                                             id="contact-name"
                                             type="text"
@@ -314,13 +315,13 @@ export default function ContactPage() {
                                             placeholder="John Doe"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[16px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 ${geologica.className}`}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-[16px] outline-none focus:border-[#FFA369] focus:bg-white focus:ring-4 focus:ring-[#FFA369]/10 transition-all duration-300 ${geologica.className}`}
                                         />
                                     </div>
 
                                     {/* Email */}
                                     <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="contact-email" className={`text-gray-300 text-sm font-medium ${geologica.className}`}>Email Address</label>
+                                        <label htmlFor="contact-email" className={`text-slate-700 text-sm font-medium ${geologica.className}`}>Email Address</label>
                                         <input
                                             id="contact-email"
                                             type="email"
@@ -328,35 +329,35 @@ export default function ContactPage() {
                                             placeholder="john@example.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[14px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 ${geologica.className}`}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-[14px] outline-none focus:border-[#FFA369] focus:bg-white focus:ring-4 focus:ring-[#FFA369]/10 transition-all duration-300 ${geologica.className}`}
                                         />
                                     </div>
 
                                     {/* Service */}
                                     <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="contact-service" className={`text-gray-300 text-sm font-medium ${geologica.className}`}>Service Needed</label>
+                                        <label htmlFor="contact-service" className={`text-slate-700 text-sm font-medium ${geologica.className}`}>Service Needed</label>
                                         <select
                                             id="contact-service"
                                             required
                                             value={formData.service}
                                             onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white text-[16px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 appearance-none cursor-pointer ${geologica.className}`}
-                                            style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '20px' }}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-[16px] outline-none focus:border-[#FFA369] focus:bg-white focus:ring-4 focus:ring-[#FFA369]/10 transition-all duration-300 appearance-none cursor-pointer ${geologica.className}`}
+                                            style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center', backgroundSize: '20px' }}
                                         >
-                                            <option value="" className="bg-[#1a1a6e] text-gray-400">Select a service...</option>
-                                            <option value="Website Development" className="bg-[#1a1a6e]">Website Development</option>
-                                            <option value="Web Application" className="bg-[#1a1a6e]">Web Application</option>
-                                            <option value="E-Commerce Store" className="bg-[#1a1a6e]">E-Commerce Store</option>
-                                            <option value="UI/UX Design" className="bg-[#1a1a6e]">UI/UX Design</option>
-                                            <option value="SEO Optimization" className="bg-[#1a1a6e]">SEO Optimization</option>
-                                            <option value="Maintenance & Support" className="bg-[#1a1a6e]">Maintenance & Support</option>
-                                            <option value="Other" className="bg-[#1a1a6e]">Other</option>
+                                            <option value="" className="bg-white text-slate-400">Select a service...</option>
+                                            <option value="Website Development" className="bg-white text-slate-800">Website Development</option>
+                                            <option value="Web Application" className="bg-white text-slate-800">Web Application</option>
+                                            <option value="E-Commerce Store" className="bg-white text-slate-800">E-Commerce Store</option>
+                                            <option value="UI/UX Design" className="bg-white text-slate-800">UI/UX Design</option>
+                                            <option value="SEO Optimization" className="bg-white text-slate-800">SEO Optimization</option>
+                                            <option value="Maintenance & Support" className="bg-white text-slate-800">Maintenance & Support</option>
+                                            <option value="Other" className="bg-white text-slate-800">Other</option>
                                         </select>
                                     </div>
 
                                     {/* Message */}
                                     <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="contact-message" className={`text-gray-300 text-sm font-medium ${geologica.className}`}>Your Message</label>
+                                        <label htmlFor="contact-message" className={`text-slate-700 text-sm font-medium ${geologica.className}`}>Your Message</label>
                                         <textarea
                                             id="contact-message"
                                             required
@@ -364,7 +365,7 @@ export default function ContactPage() {
                                             placeholder="Describe your project, timeline, and any specific requirements..."
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                            className={`w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-[16px] outline-none focus:border-[#FFA369]/50 focus:bg-white/8 focus:ring-1 focus:ring-[#FFA369]/30 transition-all duration-300 resize-none ${geologica.className}`}
+                                            className={`w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-[16px] outline-none focus:border-[#FFA369] focus:bg-white focus:ring-4 focus:ring-[#FFA369]/10 transition-all duration-300 resize-none ${geologica.className}`}
                                         />
                                     </div>
 
@@ -372,7 +373,7 @@ export default function ContactPage() {
                                     <button
                                         type="submit"
                                         id="contact-form-submit"
-                                        className="group w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-black bg-gradient-to-r from-[#FFA369] to-[#FFB78A] shadow-xl shadow-orange-950/30 hover:shadow-orange-400/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+                                        className="group w-full flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-[15px] font-bold tracking-wide text-black bg-gradient-to-r from-[#FFA369] to-[#FFB78A] shadow-md shadow-orange-100 hover:shadow-lg hover:shadow-orange-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
                                     >
                                         <span>Send via WhatsApp</span>
                                         <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 transition-transform duration-300 group-hover:scale-110">
@@ -382,7 +383,7 @@ export default function ContactPage() {
                                 </form>
 
                                 {/* Info note */}
-                                <p className={`mt-4 text-center text-gray-500 text-xs ${geologica.className}`}>
+                                <p className={`mt-4 text-center text-slate-400 text-xs ${geologica.className}`}>
                                     Your message will be sent directly to our WhatsApp business number
                                 </p>
                             </div>
@@ -392,7 +393,7 @@ export default function ContactPage() {
             </section>
 
             {/* ── Floating WhatsApp Button (Fixed) ── */}
-            <a
+            <Link
                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Scalix!")}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -406,7 +407,7 @@ export default function ContactPage() {
                 </svg>
                 {/* Ping ring */}
                 <span className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-ping opacity-30" />
-            </a>
+            </Link>
 
             {/* ── Scroll-reveal animation styles ── */}
             <style jsx>{`

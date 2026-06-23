@@ -4,6 +4,7 @@ import LenisProvider from "@/components/LenisProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const BASE_URL = "https://scalix-web-agency.netlify.app";
 
@@ -195,6 +196,7 @@ export default function RootLayout({
           </main>
 
           <Footer />
+          <Analytics />
 
           {/* Floating Instagram (Left Bottom) */}
           <a

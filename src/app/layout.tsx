@@ -9,6 +9,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const BASE_URL = "https://scalix-web-agency.netlify.app";
 
+
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -102,7 +104,7 @@ export const metadata: Metadata = {
         url: "/hero.png",
         width: 1200,
         height: 630,
-        alt: "Scalix Web Agency — Premium Web Development",
+        alt: "Scalix Web Agency — Premium Web Development Agency",
       },
     ],
   },

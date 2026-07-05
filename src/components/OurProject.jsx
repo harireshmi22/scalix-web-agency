@@ -65,8 +65,10 @@ const projects = [
 
 const OurProject = () => {
     const sectionRef = useRef(null);
+    const [mounted, setMounted] = React.useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -108,80 +110,97 @@ const OurProject = () => {
 
             {/* Swiper */}
             <div className="w-full max-w-7xl mx-auto mt-12 sm:mt-20 px-4 sm:px-6">
-                <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    navigation={true}
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 4000, disableOnInteraction: false }}
-                    loop={true}
-                    grabCursor
-                    className="w-full project-swiper"
-                >
-                    {projects.map((project) => (
-                        <SwiperSlide key={project.id} className="p-2">
-                            <div className="group flex flex-col lg:flex-row rounded-3xl border border-gray-200 bg-white/60 gap-6 sm:gap-10 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-0.5 p-5 sm:p-8 lg:p-10">
-                                {/* Image */}
-                                <div className="relative w-full h-[220px] sm:h-[320px] lg:h-[400px] lg:w-1/2 overflow-hidden rounded-2xl shrink-0">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        width={1200}
-                                        height={800}
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                </div>
+                {mounted ? (
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        navigation={true}
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 4000, disableOnInteraction: false }}
+                        loop={true}
+                        grabCursor
+                        className="w-full project-swiper"
+                    >
+                        {projects.map((project) => (
+                            <SwiperSlide key={project.id} className="p-2">
+                                <div className="group flex flex-col lg:flex-row rounded-3xl border border-gray-200 bg-white/60 gap-6 sm:gap-10 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-0.5 p-5 sm:p-8 lg:p-10">
+                                    {/* Image */}
+                                    <div className="relative w-full h-[220px] sm:h-[320px] lg:h-[400px] lg:w-1/2 overflow-hidden rounded-2xl shrink-0">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            width={1200}
+                                            height={800}
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                    </div>
 
-                                {/* Content */}
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center text-left">
-                                    <h3 className={`text-2xl sm:text-3xl font-semibold text-gray-900 ${anton.className}`}>
-                                        {project.title}
-                                    </h3>
+                                    {/* Content */}
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center text-left">
+                                        <h3 className={`text-2xl sm:text-3xl font-semibold text-gray-900 ${anton.className}`}>
+                                            {project.title}
+                                        </h3>
 
-                                    <p className={`text-[14.5px] leading-relaxed text-gray-500 mt-3 sm:mt-4 ${geologica.className}`}>
-                                        {project.description}
-                                    </p>
+                                        <p className={`text-[14.5px] leading-relaxed text-gray-500 mt-3 sm:mt-4 ${geologica.className}`}>
+                                            {project.description}
+                                        </p>
 
-                                    {/* Tags */}
-                                    <div className="flex flex-wrap gap-2 mt-5 sm:mt-6">
-                                        {project.tags.map((tag) => (
+                                        {/* Tags */}
+                                        <div className="flex flex-wrap gap-2 mt-5 sm:mt-6">
+                                            {project.tags.map((tag) => (
+                                                <span
+                                                    key={tag}
+                                                    className="text-xs font-medium px-3 py-1.5 rounded-full border"
+                                                    style={{
+                                                        color: project.accentFrom,
+                                                        borderColor: `${project.accentFrom}30`,
+                                                        backgroundColor: `${project.accentFrom}08`,
+                                                    }}
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* View Project */}
+                                        <div className="mt-6 sm:mt-8 flex items-center gap-2 group/link cursor-pointer self-start">
                                             <span
-                                                key={tag}
-                                                className="text-xs font-medium px-3 py-1.5 rounded-full border"
-                                                style={{
-                                                    color: project.accentFrom,
-                                                    borderColor: `${project.accentFrom}30`,
-                                                    backgroundColor: `${project.accentFrom}08`,
-                                                }}
+                                                className={`text-sm font-semibold ${geologica.className}`}
+                                                style={{ color: project.accentFrom }}
                                             >
-                                                {tag}
+                                                View Project
                                             </span>
-                                        ))}
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                strokeWidth={2} stroke={project.accentFrom}
+                                                className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                            </svg>
+                                        </div>
                                     </div>
-
-                                    {/* View Project */}
-                                    <div className="mt-6 sm:mt-8 flex items-center gap-2 group/link cursor-pointer self-start">
-                                        <span
-                                            className={`text-sm font-semibold ${geologica.className}`}
-                                            style={{ color: project.accentFrom }}
-                                        >
-                                            View Project
-                                        </span>
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            strokeWidth={2} stroke={project.accentFrom}
-                                            className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1"
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                        </svg>
-                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                ) : (
+                    <div className="w-full min-h-[30rem] bg-white/60 rounded-3xl border border-gray-200 flex items-center justify-center animate-pulse p-10">
+                        <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-10">
+                            <div className="bg-gray-200/60 rounded-2xl w-full h-[220px] sm:h-[320px] lg:h-[400px] lg:w-1/2" />
+                            <div className="flex flex-col justify-center flex-1 gap-4">
+                                <div className="h-8 bg-gray-200/60 rounded-md w-3/4" />
+                                <div className="h-20 bg-gray-200/60 rounded-md w-full" />
+                                <div className="flex gap-2">
+                                    <div className="h-6 bg-gray-200/60 rounded-full w-16" />
+                                    <div className="h-6 bg-gray-200/60 rounded-full w-16" />
+                                    <div className="h-6 bg-gray-200/60 rounded-full w-16" />
                                 </div>
                             </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Custom Swiper Styles */}

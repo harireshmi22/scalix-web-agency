@@ -4,6 +4,11 @@ import Link from 'next/link'
 import { anton, architectsDaughter, geologica } from "@/lib/fonts"
 
 const Footer = () => {
+    const [year, setYear] = React.useState(2026)
+    React.useEffect(() => {
+        setYear(new Date().getFullYear())
+    }, [])
+
     return (
         <footer
             id="contact"
@@ -158,7 +163,7 @@ const Footer = () => {
                 {/* Bottom Row */}
                 <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className={`text-[13.5px] text-gray-500 text-center sm:text-left ${geologica.className}`}>
-                        © {new Date().getFullYear()} Scalix. All rights reserved.
+                        © {year} Scalix. All rights reserved.
                     </p>
                     <p className={`text-[13.5px] text-gray-500 text-center sm:text-right ${geologica.className}`}>
                         Designed and developed with passion by <span className={`text-[#FFA369] ${architectsDaughter.className}`}>Scalix Team</span>.
